@@ -12,4 +12,4 @@ Business having offshore development centers
 - Indian founders with business having parent entity in US. 
 
 ## Related jobs 
-- [fetch_invoices](/library/data_fetch/fetch_invoices)
+- [fetch_invoices](/library/jobs/zoho_books/fetch_invoices)
