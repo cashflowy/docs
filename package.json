@@ -8,7 +8,7 @@
     "prestart": "node ./scripts/checkRemarkPluginsBuild.js",
     "start": "docusaurus start",
     "prebuild": "rm -rf dist && npm run build:plugins",
-    "build": "docusaurus build --out-dir dist",
+    "build": "docusaurus build",
     "build:plugins": "npm --prefix ./plugins/cypressRemarkPlugins run build",
     "lint": "npm run lint:markdown",
     "lint:fix": "npm run lint:markdown:fix",
