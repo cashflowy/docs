@@ -2,12 +2,9 @@ import React from "react";
 import { GsheetProps } from "./types";
 
 export default function Gsheet({ src, title }: GsheetProps) {
-  // var src = 'https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false';
-  // var src = 'https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/pubhtml?gid=0&single=true&widget=true&headers=false'
-  var embeded_src = '';
+
   var temp = src.split('/edit#');
   var embeded_src=temp[0]+'/pubhtml?'+temp[1]+'&single=true&widget=true&headers=false';
-  var sheet_id = '1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc';
   
   return (
     <>
