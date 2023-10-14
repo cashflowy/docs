@@ -1,0 +1,55 @@
+# Fetch Credit Notes
+
+This job fetches Credit notes from zoho books. 
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1348788228"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| date | Date of the credit note |
+| creditnote_number | Number of the credit note |
+| customer_name | Name of the customer |
+| applied_invoices | Invoice numbers that this credit note applies to |
+| currency_code | Currency code |
+| total | Total value of the credit note |
+| balance | Balance unutilised in the credit note |
+| status | Status of the credit note |
+| exchange_rate | Exchange rate |
+| created_time | Time this credit note was created in zoho books |
+| last_modified_time | Time this credit note was updated in zoho books |
+| customer_id | zoho books id of the related customer |
+| creditnote_id | zoho books id of the credit note |
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+<!---
+| contact_id | Select bills related to a particular contact (either customer or vendor). Contact id is the id of the customer or vendor from zoho books.  |
+-->
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

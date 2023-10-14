@@ -1,0 +1,57 @@
+# Fetch Bills
+
+This job fetches Bills from zoho books. Invoices from vendors are called bills in zoho books.
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=2115811659"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| date | Date of the bill |
+| bill_number | Bill number  |
+| vendor_name | Name of the vendor |
+| status | Status of the bill. Can be - `paid` |
+| currency_code | Currency used in this bill |
+| total | Total value of the bill |
+| tds_total | TDS deducted on this bill |
+| balance | Balance unpaid |
+| due_date | Due date |
+| attachment_name | Name of any attachments if any |
+| has_attachment | `TRUE` if this bill has any documents attached |
+| exchange_rate | Exchange rate used in this bill |
+| created_time | time this invoice was created in zoho books |
+| last_modified_time | time this invoice was modified in zoho books |
+| bill_id | Zoho books id for this bill |
+| vendor_id | Zoho books id for the related vendor |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| contact_id | Select bills related to a particular contact (either customer or vendor). Contact id is the id of the customer or vendor from zoho books.  |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
