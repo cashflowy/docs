@@ -1,20 +1,63 @@
 # Fetch Invoices
 
-This job fetches invoices from zoho books.
+This job fetches invoices from zoho books. 
 
-Filter by:
-- customer id
-- dates
+## Data
 
-
-## Sample output
+### Sample Data
 
 <Gsheet
   src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=0"
 />
 
+### Data headers
+
+| Header | Description |
+|----|----|
+| date | Date of the invoice |
+| customer_name | Name of the customer |
+| invoice_number | Official invoice number this is referenced by people |
+| currency_code | Currency used in this invoice |
+| total | Total value of the invoice in the currency this is issued in. |
+| base_total | Total value of the invoice in base currency of the seller |
+| balance | Balance unpaid in the currency this invoice is issued in |
+| base_balance | Balance unpaid in base currency of the seller |
+| status | status of the invoice. Can be `issued`, `paid`or `overdue` |
+| due_date | Date when this issue is due to be paid |
+| shipping_charge | Cost of shipping as mentioned in this invoice |
+| adjustment | Adjustments made to this invoice |
+| write_off_amount | Amount that is written off from this invoice |
+| last_payment_date | Date of last payment related to this invoice |
+| exchange_rate | Exchange rate of the invoice currency to base currency of the seller used for this particular invoice. Exchange rates of the same currency pair can differ between invoice depending on the date of the invoice. |
+| country | Country of the buyer |
+| created_by | can be `Zoho Books` or <user_name>. Invoices created by `Zoho Books` are typically recurring invoices. |
+| documents | name of the document attached with this invoice. This does not work often. Do not relie on this |
+| has_attachment | whether this invoice has any attachment. Is either `TRUE` or `FALSE` |
+| transaction_type | can be `renewal` or |
+| created_time | time this invoice was created in zoho books |
+| last_modified_time | time this invoice was modified in zoho books |
+| updated_time | time this invoice was updated in zoho books |
+| invoice_id | zoho books id used to uniquely identify an invoice |
+| customer_id | zoho books id used to uniquely identify a customer |
 
 
-## Destination support
-This data fetch is available in google sheets & microsoft office 365
-related job ids - `google_sheet_zoho_books_fetch_invoice`
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select invoice with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select invoices with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| customer_id | Select invoices issued to a particular customer. Customer id is the id of the customer from zoho books.  |
+
+
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
