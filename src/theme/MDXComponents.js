@@ -10,6 +10,7 @@ import DefaultSelectorPriority from "@site/docs/partials/_default-selector-prior
 import DocsImage from "@site/src/components/docs-image";
 import DocsVideo from "@site/src/components/docs-video";
 import Gsheet from "@site/src/components/gsheet";
+import AddJob from "@site/src/components/add-job";
 import DocumentDomainWorkaround from "@site/docs/partials/_document-domain-workaround.mdx";
 import E2EOnlyBadge from "@site/src/components/e2e-only-badge";
 import E2EOrCtTabs from "@site/src/components/e2e-or-ct-tabs";
@@ -126,6 +127,7 @@ export default {
   DocsImage,
   DocsVideo,
   Gsheet,
+  AddJob,
   DocumentDomainWorkaround,
   E2EOnlyBadge,
   E2EOrCtTabs,
