@@ -2,7 +2,9 @@
 
 This job fetches account transactions from zoho books. 
 
-
+<AddJob
+  template="gsheet_zoho_books_db_get_account_transactions"
+/>
 
 
 ## Data
@@ -33,6 +35,7 @@ This job fetches account transactions from zoho books.
 | transaction_id | zoho books id used to refer to this transaction |
 | contact_id | zoho books id used to refer to the contact related to this transaction |
 | account_id | zoho books id used to refer to the account in this transaction |
+| ym | Year month of the entry in YYYY-MM format .e.g `2023-10` |
 
 
 ### Filteration options
