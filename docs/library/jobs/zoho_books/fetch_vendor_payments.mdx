@@ -1,0 +1,64 @@
+# Fetch Vendor Payments
+
+This job fetches vendor payments from zoho books. Vendor payments are money that you paid your vendors - either against a bill or in advance.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_vendor_payments"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1912124598"
+/>
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| date | Date of the payment |
+| payment_number | Payment number |
+| payment_mode | Mode of payment. Can be - 'Bank Transfer', 'Employee Reimbursement', 'Cash' |
+| vendor_name | Name of the vendor |
+| bill_number | Bill number |
+| currency_code | Currency of this payment |
+| amount | Amount made with this payment |
+| balance | Amount that is not knocked off against a bill yet |
+| paid_through_account_name | Account used for making this payment |
+| description | Description |
+| reference_number | Payment reference number |
+| bcy_amount | Amount made with this payment in base currency |
+| bcy_balance | Amount that is not knocked off against a bill yet in base currency |
+| exchange_rate | Exchange rate |
+| created_time | time this payment was created in zoho books |
+| last_modified_time | time this payment was modified in zoho books |
+| has_attachment | `TRUE` if this payment has any documents attached |
+| is_advance_payment | `TRUE` if this payment is an advance payment |
+| paid_through_account_id | Zoho books ID for the account used for making this payment |
+| payment_id | Zoho books ID for this payment |
+| vendor_id | Zoho books id for the related vendor |
+| ym | Year month of the entry in YYYY-MM format .e.g `2023-10` |
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select payments with date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select payments with date on or before `end_date`. Format - `YYYY-MM-DD` |
+| vendor_id | Select payments related to a particular vendor. Use the zoho books vendor id. |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
