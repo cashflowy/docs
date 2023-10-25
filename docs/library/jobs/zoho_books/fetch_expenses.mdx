@@ -1,0 +1,64 @@
+# Fetch Expenses
+
+This job fetches expenses from zoho books. According to Zoho books, expense is an alternative to bills where the expense and the payment is recorded at the same time. 
+
+<AddJob
+  template="gsheet_zoho_books_db_get_expenses"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1092125666"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| date | Date of the expense |
+| account_name | Related Chart of Account|
+| currency_code | Currency in which this transaction took place |
+| total_without_tax | Value of the expense without tax |
+| total | Total expense including tax |
+| paid_throught_account_name | The account name that this expense was paid though. Typically bank account or credit card. Can be a reimbursement account as well. |
+| description | Description of the expense |
+| reference_number | Payment reference number |
+| vendor_name | Name of the vendor |
+| expense_receipt_name | Name of the receipt file uploaded |
+| bcy_total_without_tax | Value of the expense without tax in base currency |
+| bcy_total | Total expense including tax in base currency |
+| created_time | Time this expense was created in zoho books |
+| last_modified_time | Time this expense was updated in zoho books |
+| exchange_rate | Exchange rate |
+| has_attachment | whether this invoice has any attachment. Is either `TRUE` or `FALSE` |
+| vendor_id | zoho books id used to refer to the vendor related to this transaction |
+| expense_id | zoho books id used to refer to this expense object |
+| ym | Year month of the entry in YYYY-MM format .e.g `2023-10` |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| vendor_id | Select transactions related to a particular vendor. This is the ID of the vendor in zoho books |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
