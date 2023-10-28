@@ -34,16 +34,10 @@ export default function NotFound() {
               <div className={s.listWrapper}>
                 <ul>
                     <li>
-                      <a href="/guides/core-concepts/introduction-to-cypress">Introduction to Cypress</a>
+                      <a href="/library/reports/intro">Reports library</a>
                     </li>
                     <li>
-                      <a href="/api">The API Docs</a>
-                    </li>
-                    <li>
-                      <a href="/examples/tutorials">Tutorials</a>
-                    </li>
-                    <li>
-                      <a href="/guides/cloud/introduction">Cypress Cloud</a>
+                      <a href="/library/jobs/intro">Jobs library</a>
                     </li>
                   </ul>
               </div>
