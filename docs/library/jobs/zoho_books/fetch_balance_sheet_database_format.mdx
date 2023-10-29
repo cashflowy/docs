@@ -1,0 +1,48 @@
+# Fetch Balance Sheet database formate
+
+The Zoho Books balance sheet presents a real-time summary of your company's financial standing, showcasing assets, liabilities, and equity at a specific point in time. It offers an instant snapshot of your financial health. 
+
+<AddJob
+  template="gsheet_zoho_books_db_balance_sheet"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=833516919"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| Accounts | Name of the related account |
+| account_id/node_name | zoho books id of the related account or node name |
+| month |  |
+| value |  |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
