@@ -1,0 +1,40 @@
+---
+title: Income Report
+sidebar_position: 2
+cf_rt: google_sheet_zoho_books_income_report
+---
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1hazPEb69ZKJYU0OFUCt1mAWSQyhmvgVUbNFgctw2f-w/edit#gid=90267286"
+  type="report"
+/>
+
+## Purpose 
+The purpose of this report is to deep dive into invoices. This report helps you review and analyse your invoices. 
+
+<AddReport
+  template={frontMatter.cf_rt}
+/>
+
+
+## How it works 
+- Cashflowy gets all accounting transactions with account_group set as income from zoho books. This data is stored in the sheet - `account_transactions`
+- In sheet - `Report`, using Excel formulaes, the data is presented in a tabular format with months along the x-axis and account name along the y-axis. This helps you see your expense split and trend over the months. 
+- To help you visualise this better, the `summary` sheet has a chart.  
+
+
+## Jobs used in this report
+This report uses only one job.
+### 1. [Fetch Accounting Transactions](/library/jobs/zoho_books/fetch_account_transactions)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+| contact_id| leave blank| this filter option is not relevant for this report |
+| account_group| Income | Setting this as `Expense` will get all expense transactions |
+
+
+## Destination support 
+- google sheet - yes
+- office 365 - yes
