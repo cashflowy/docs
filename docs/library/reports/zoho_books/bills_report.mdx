@@ -1,26 +1,38 @@
 ---
-
+title: Bills Report
+sidebar_position: 2
+cf_rt: google_sheet_zoho_books_bills_report
 ---
-# Bills report
 
-## Purpose 
-The purpose of this report is to deep dive into bills. 
 <Gsheet
   src="https://docs.google.com/spreadsheets/d/1D6DWMT-bqS28C90V7BONbqnq10LWyxxczAJBLfsUdas/edit#gid=1490204803"
   type="report"
 />
 
+## Purpose 
+The purpose of this report is to deep dive into bills. This report helps you review and control your bills. 
 
-## About
-Helps your TP consultant 
+<AddReport
+  template={frontMatter.cf_rt}
+/>
+
+
+## How it works 
+- Cashflowy gets all bills from zoho books. This data is stored in the sheet - `bills`
+- In sheet - `Report`, using Excel formulaes, the data is presented in a tabular format with months along the x-axis and account name along the y-axis. This helps you see your bill split and trend over the months. 
+- To help you visualise this better, the `summary` sheet has a chart.  
+
+
+## Jobs used in this report
+This report uses only one job.
+### 1. [Fetch Bills](/library/jobs/zoho_books/fetch_bills)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
 
 ## Destination support 
 - google sheet - yes
 - office 365 - yes
-
-## Usecase 
-Business having offshore development centers 
-- Indian founders with business having parent entity in US. 
-
-## Related jobs 
-- [fetch_invoices](/library/jobs/zoho_books/fetch_invoices)
