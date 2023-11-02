@@ -1,0 +1,49 @@
+# Fetch Cashflow Statement simple formate
+
+The Quickbooks cash flow statement provides a real-time overview of your company's cash movements, detailing cash inflows and outflows at a specific point in time. It offers an immediate snapshot of your liquidity and how money is moving within your business.
+
+<AddJob
+  template="gsheet_quickbooks_simple_cash_flow_statement"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=1884311118"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| Accounts | Name of the related account |
+| Accounts Id | quickbooks id of the related account |
+| Total |  Total account balance for a specific month |
+| Total |  Total account balance for another specific month |
+| ... |  ...  |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
