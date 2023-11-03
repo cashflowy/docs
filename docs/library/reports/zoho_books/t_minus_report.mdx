@@ -1,0 +1,105 @@
+---
+title: T Minus Report
+sidebar_position: 2
+cf_rt: google_sheet_zoho_books_t_minus_report
+---
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1o9fo5XRV-EXe830fFbzj9bxt2bu-wjWhzQhP6CnlyTA/edit#gid=2109536248"
+  type="report"
+/>
+
+## Purpose 
+If your book keeping process is not reliable, your financial data also becomes unreliable. T-1(pronouced as "T minus one") book keeping is a practice that companies adopt to improve their book keeping practice. T-1 means books are closed within one day every day. I.e. today, the books are accurate up to yesterday. T-X, `X` represents how many days after do you close the books or pass the entry. 
+
+Implementing T-1 practice for small business is hard. It requires additional staff and extra attention. This report will give you a sense of how bad your book keeping process is. It gives you an objective metric that you can use to keep your book keeping team accountable.
+
+e.g. you can instruct your book keeping team that, invoices should be recorded in the books within 3 days. 90% of the bills should be recorded in the books within 30 days. 
+
+Taking a look at your T minus report will also give you business owner, how much you can trust the data in the other reports. 
+
+ 
+<AddReport
+  template={frontMatter.cf_rt}
+/>
+
+
+## How it works 
+- This report tracks 8 objects. So this report has 8 jobs. Even if you dont use all 8 objects, we recommend tracking the first 5 - namely - bills, expenses, vendor_payments, invoices, customer_payments
+- Cashflowy jobs gets data from zoho books for the above 8 objects and puts them into individual sheets. 
+- T minus is calculated using excel formulaes in `common` sheet.
+- That information is consolidated in `t_minus` sheet
+- `t_minus` sheet shows the following information
+  - count - number of transactions
+  - min - min value of t-minus
+  - max - max value of t-minus
+  - avg - average value of t-minus
+  - standard deviation - how much variation is present in the t-minus
+
+
+For small business, we recommend, your books closed within 7 days. If your Tminus score is less than 30 it is still doable. You need to work on getting the number lower if possible. Tminus score more than 30 needs immediate attention. 
+
+
+
+## Jobs used in this report
+This report uses only one job.
+### 1. [Fetch Bills](/library/jobs/zoho_books/fetch_bills)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+### 2. [Fetch Expenses](/library/jobs/zoho_books/fetch_expenses)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+### 3. [Fetch Vendor payments](/library/jobs/zoho_books/fetch_vendor_payments)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+### 4. [Fetch Invoices](/library/jobs/zoho_books/fetch_invoices)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+### 5. [Fetch Customer Payments](/library/jobs/zoho_books/fetch_customer_payments)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+### 6. [Fetch Credit Notes](/library/jobs/zoho_books/fetch_credit_notes)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+### 7. [Fetch Debit Notes](/library/jobs/zoho_books/fetch_debit_notes)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+### 8. [Fetch Journals](/library/jobs/zoho_books/fetch_journals)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+
+## Destination support 
+- google sheet - yes
+- office 365 - yes
