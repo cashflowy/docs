@@ -1,0 +1,41 @@
+---
+title: Customer report
+sidebar_position: 2
+cf_rt: google_sheet_zoho_books_customer_report
+---
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KamQpvRaUOKk_7sAKpZRUmSbRU2EMKF3X2cjmG9sais/edit#gid=2109536248"
+  type="report"
+/>
+
+## Purpose 
+This report helps with your customer reconciliation process. Typically when working with various customers, confusions arise in terms of invoicing done or payments made. This can become complex if the payment cycles are more than 30 days, making it hard to track payments against invoices. This reports exports data exclusively for one customer so that you can share this with your customer. This enables you to reconcile with the customer's accounts team faster. 
+
+This report is similar to [Vendor report](/library/reports/zoho_books/vendor_report).
+
+<AddReport
+  template={frontMatter.cf_rt}
+/>
+
+
+## How it works 
+- This report fetches transactions related to a specific customer. 
+- Get the customer id from zoho books and fill that into the `contact_id` for the job. 
+- Cashflowy jobs gets data from zoho books only for this customer in sheet - `account_transactions`. 
+- Data in `accounting_transactions` sheet is used to build a summary(visible in `summary` sheet) 
+
+
+## Jobs used in this report
+This report uses only one job.
+### 1. [Fetch Account Transactions](/library/jobs/zoho_books/fetch_account_transactions)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+| contact_id| contact id of the customer from zoho books | Open zoho books and find the contact id of the customer. You can also get the contact id from other reports. |
+
+## Destination support 
+- google sheet - yes
+- office 365 - yes
