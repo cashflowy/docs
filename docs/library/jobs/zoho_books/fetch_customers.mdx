@@ -1,0 +1,84 @@
+# Fetch Customers
+
+This job fetches customers from zoho books.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_customers"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=184567633"
+/>
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| customer_name | Name of the customer |
+| contact_id | zoho books id of the customer related to this payment |
+| company_name | Name of the customer's company |
+| website | |
+| language_code | Language code |
+| contact_type | Contact type |
+| status | Status (e.g., active) |
+| customer_sub_type | Customer subtype (e.g., business) |
+| source | Source (e.g., user) |
+| is_linked_with_zohocrm | Whether linked with Zoho CRM (true/false) |
+| payment_terms | Payment terms |
+| payment_terms_label | Formatted payment terms label |
+| currency_code | Currency code |
+| outstanding_receivable_amount | Outstanding receivable amount |
+| unused_credits_receivable_amount | Unused credits receivable amount |
+| first_name | First name of the contact |
+| last_name | Last name of the contact |
+| email | Email address |
+| phone | Phone number |
+| mobile | Mobile number |
+| twitter | Twitter handle |
+| facebook | Facebook handle |
+| portal_status | Portal status (e.g., disabled) |
+| created_time | Time the contact was created in Zoho Books |
+| last_modified_time | Time the contact was last modified in Zoho Books |
+| ach_supported | Whether ACH (Automated Clearing House) is supported (true/false) |
+| gst_no | GST number |
+| gst_treatment | GST treatment |
+| place_of_contact | Place of contact |
+| tax_treatment |	Tax treatment |
+| has_attachment | Whether there is an attachment (true/false) |
+| contact_name | 	Name of the contact |
+| language_code_formatted | Formatted language code |
+| contact_type_formatted | 	Formatted contact type |
+| outstanding_receivable_amount_bcy | Outstanding receivable amount in base currency |
+| unused_credits_receivable_amount_bcy | Unused credits receivable amount in base currency |
+| currency_id | Zoho Books ID of the currency |
+| created_time_formatted | |
+| last_modified_time_formatted | |
+| place_of_contact_formatted | Formatted place of contact |
+
+<!---
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| contact_id | Select bills related to a particular contact (either customer or vendor). Contact id is the id of the customer or vendor from zoho books.  |
+-->
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
