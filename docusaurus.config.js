@@ -99,6 +99,12 @@ const config = {
         title: 'CF Docs',
         items: [
           {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'library',
+            label: 'Library',
+          },
+          {
             to: 'https://www.cashflowy.io',
             label: 'Website', 
             position: 'left'

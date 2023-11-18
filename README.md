@@ -29,6 +29,9 @@ This command generates static content into the `dist` directory and can be
 served using any static contents hosting service.
 
 
+### Deployment
+This is deployed using netlify. 
+
 ## License
 
 This project is licensed under the terms of the [MIT license](/LICENSE.md).
