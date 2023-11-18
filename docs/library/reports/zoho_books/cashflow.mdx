@@ -1,14 +1,13 @@
 ---
-title: Balance sheet
+title: Cashflow Statement
 sidebar_position: 1
-cf_rt: google_sheet_zoho_books_balance_sheet
+cf_rt: google_sheet_zoho_books_cashflow
 ---
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/19TG5W3gIIymhdMr9k1UMgWZ0iZsAh63ixi6MRoCxjIc/edit#gid=0"
+  src="https://docs.google.com/spreadsheets/d/1v5M0VEmqpHedmV1WUqeSAyCzScEipEyoyC-8gZhPq_w/edit#gid=0"
   type="report"
 />
-
 
 This report fetchs data from zoho books and shows it as it is. This is useful for getting a quick sense of the numbers and a sense of grouping of the chart of accounts. Typically this report is not used as a final output. It is used to getting a reference to build your own custom Balance sheet based on how you like to group your chart of accounts. This report acts as a reference to bench mark against. 
 
@@ -18,7 +17,6 @@ If you want to make your own custom balance_sheet(as in organise the line items 
   template={frontMatter.cf_rt}
 />
 
-
 ## How it works 
 - Cashflowy gets all accounting transactions with account_group set as expense from zoho books. This data is stored in the sheet - `accounting_transactions`
 - In sheet - `Report`, using Excel formulaes, the data is presented in a tabular format with months along the x-axis and account name along the y-axis. This helps you see your expense split and trend over the months. 
@@ -27,16 +25,17 @@ If you want to make your own custom balance_sheet(as in organise the line items 
 
 ## Jobs used in this report
 This report uses two jobs:
-### 1. [Fetch Balance sheet simple format](/library/jobs/zoho_books/fetch_balance_sheet/simple_format)
+### 1. [Fetch Cashflow statement simple format](/library/jobs/zoho_books/fetch_cashflow_statement/simple_format)
 | variable name | set to | comments|
 | --- | --- | --- | 
 | start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
 
-### 2. [Fetch Balance sheet database format](/library/jobs/zoho_books/fetch_balance_sheet/database_format)
+### 2. [Fetch Cashflow statement database format](/library/jobs/zoho_books/fetch_cashflow_statement/database_format)
 
 | variable name | set to | comments|
 | --- | --- | --- | 
 | start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+
 
 
 ## Destination support 
