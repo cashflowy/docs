@@ -1,9 +1,13 @@
-# Fetch Balance Sheet database formate
+---
+title: Fetch Balance sheet simple format
+sidebar_position: 1
+sidebar_label: Simple format
+---
 
 The Zoho Books balance sheet presents a real-time summary of your company's financial standing, showcasing assets, liabilities, and equity at a specific point in time. It offers an instant snapshot of your financial health. 
 
 <AddJob
-  template="gsheet_zoho_books_db_balance_sheet"
+  template="gsheet_zoho_books_simple_balance_sheet"
 />
 
 
@@ -12,7 +16,7 @@ The Zoho Books balance sheet presents a real-time summary of your company's fina
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=833516919"
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1264590396"
 />
 
 
@@ -21,9 +25,10 @@ The Zoho Books balance sheet presents a real-time summary of your company's fina
 | Header | Description |
 |----|----|
 | Accounts | Name of the related account |
-| account_id/node_name | zoho books id of the related account or node name |
-| month |  |
-| value |  |
+| Accounts Id | zoho books id of the related account |
+| Total |  Total account balance for a specific month |
+| Total |  Total account balance for another specific month |
+| ... |  ...  |
 
 
 ### Filteration options
