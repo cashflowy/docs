@@ -1,0 +1,39 @@
+---
+title: Profit and Loss
+sidebar_position: 1
+cf_rt: google_sheet_zoho_books_pnl
+---
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/139YYuIluOi_iSuKXjo7VVWjqchioN4rpZN4w3LKku2U/edit#gid=2143715470"
+  type="report"
+/>
+
+This report fetchs data from zoho books and shows it as it is. This is useful for getting a quick sense of the numbers and a sense of grouping of the chart of accounts. Typically this report is not used as a final output. It is used to getting a reference to build your own custom Balance sheet based on how you like to group your chart of accounts. This report acts as a reference to bench mark against. 
+
+If you want to make your own custom balance_sheet(as in organise the line items that best suits your business..) use the 
+
+<AddReport
+  template={frontMatter.cf_rt}
+/>
+
+## How it works 
+- Cashflowy gets all accounting transactions with account_group set as expense from zoho books. This data is stored in the sheet - `accounting_transactions`
+- In sheet - `Report`, using Excel formulaes, the data is presented in a tabular format with months along the x-axis and account name along the y-axis. This helps you see your expense split and trend over the months. 
+- To help you visualise this better, the `summary` sheet has a chart.  
+
+
+## Jobs used in this report
+This report uses two jobs:
+### 1. [Fetch Profit and Loss simple format](/library/jobs/zoho_books/fetch_pnl/simple_format)
+### 2. [Fetch Profit and Loss database format](/library/jobs/zoho_books/fetch_pnl/database_format)
+
+| variable name | set to | comments|
+| --- | --- | --- | 
+| start_date| YYYY-04-01 | start of the financial year in YYYY-MM-DD format. Typically 1st April |
+| end_date| YYYY-03-31 | end of the financial year in YYYY-MM-DD format. Typically 31st March |
+
+
+## Destination support 
+- google sheet - yes
+- office 365 - yes
