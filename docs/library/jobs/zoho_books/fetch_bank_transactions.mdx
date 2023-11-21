@@ -24,14 +24,14 @@ This job fetches bank transactions from zoho books.
 | Header | Description |
 |----|----|
 | date | Date of the bank transaction |
-| transaction_type | Can be - `card_payment`, `customer_payment`,`expense`, `transfer_fund`, `vendor_payment` |
 | account_name | Name of the bank account |
-| account_type | type of the account. Can be - `bank`, `credid_card`, `payment_clearing`,  |
 | currency | Currency of this transaction |
 | amount | Amount transacted. +ve number means money is added to this account. -ve amount means moneys is taken from this account. |
-| debit_or_credit | debit or credit |
 | reference_number | Reference number |
 | payee | Name of the customer/vendor  |
+| transaction_type | Can be - `card_payment`, `customer_payment`,`expense`, `transfer_fund`, `vendor_payment` |
+| account_type | type of the account. Can be - `bank`, `credid_card`, `payment_clearing`,  |
+| debit_or_credit | debit or credit |
 | source | Source of this transaction - `manually_added`, `bank_feed`, `csv` |
 | status | Status of this tranaction. Can be - `categorized`, 'manually_added', `matched` |
 | transaction_id | zoho books id of this transaction |
@@ -48,7 +48,13 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 |----|----|
 | start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
 | end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
-| customer_id | Select transactions related to a particular contact (either customer or vendor). Customer id is the id of the customer or vendor from zoho books.  |
+| account_id | Select transactions related to a particular account. Account id is the id of the account from zoho books. |
+| customer_id | Select transactions related to a particular contact (either customer or vendor). Customer id is the id of the customer or vendor from zoho books. |
+| status | Select transactions by status. Options: `All`,`Categorized`, `Matched`, `Manually added` and `Uncategorized` |
+| source | Select transactions by source. Options: `All`,`API`, `Bank feeds`, `CSV` and `Manually added` |
+| source | Select transactions by source. Options: `All`,`API`, `Bank feeds`, `CSV` and `Manually added` |
+| account_type | Select transactions by account_type. Options: `All`,`Bank`, `Cash`, `Credit card` and `Payment clearing` |
+| transaction_type | Select transactions by transaction_type. Options: `All`,`Card payment`, `Customer payment`, `Credit card`,`Deposit`,`Expense`,`Expense refund`,`Interest income`,`Payment refund`,`Refund`,`Transfer fund`,`Vendor payment` and `Vendorpayment refund` |
 
 <!---
 ## Others

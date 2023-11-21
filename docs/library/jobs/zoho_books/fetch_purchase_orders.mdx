@@ -1,0 +1,73 @@
+---
+title: Fetch Purchase Orders
+sidebar_position: 2
+---
+
+This job retrieves Purchase Orders from Zoho Books. In Zoho Books, Purchase Orders are documents that businesses use to request goods or services from vendors. They serve as a formal request indicating the details of the items or services needed, including quantities, prices, and other relevant information. The Purchase Orders are crucial in the procurement process, allowing businesses to streamline and track their purchasing activities with vendors.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_purchase_orders"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1225499346"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| date | Date of the purchase order |
+| vendor_name | Name of the vendor |
+| status | Status of the purchase order. Can be - `open` |
+| total | Total value of the purchase order |
+| billed_status | Billed status of the purchase order  |
+| currency |Currency used in the purchase order |
+| vendor_id | Zoho books id for the related vendor |
+| purchaseorder_number | Purchase order number |
+| delivery_date | Delivery date |
+| color_code | Color code associated with the purchase order |
+| current_sub_status | Current sub-status of the purchase order |
+| reference_number | Reference number associated with the order |
+| is_viewed_by_client | Boolean indicating if the order is viewed by the client |
+| client_viewed_time | Time the client viewed the order |
+| created_time | Time the purchase order was created |
+| last_modified_time | Time the purchase order was last modified |
+| purchaseorder_id | ID of the purchase order |
+| company_name | Name of the company |
+| order_status | Status of the purchase order. Can be - `open` |
+| current_sub_status_id | ID of the current sub-status |
+| delivery_days | Number of days for delivery |
+| due_by_days | Number of days due |
+| due_in_days | Number of days remaining due |
+| currency_id | ID of the currency used |
+| price_precision | Precision for the price |
+| has_attachment	 | `TRUE` if the purchase order has attachments |
+| quantity_yet_to_receive	 | Quantity yet to be received |
+| quantity_marked_as_received	 | Quantity marked as received |
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| vendor_id | Filter by the ID of the vendor associated with the purchase order |
+| status | Search purchase order by purchase order status. Options: `All`,`draft`, `open`, `billed` and `cancelled` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
