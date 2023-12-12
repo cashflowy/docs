@@ -1,0 +1,52 @@
+---
+title: Fetch TDS Summary
+sidebar_position: 2
+---
+
+Summary of Tax Deducted at Source (TDS) in Zoho Books offers a detailed overview of TDS-related information. This feature includes key details such as tax names, tax percentages, transaction amounts, and TDS amounts, providing valuable insights into TDS-related transactions. Utilize the dedicated job, Fetch TDS Summary, to seamlessly retrieve comprehensive data from Zoho Books.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_tds_summary"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=373294347"
+/>
+
+
+### Data headers
+
+| Header                         | Description                                          |
+|--------------------------------|------------------------------------------------------|
+| tds_section                    | TDS section code                                     |
+| tds_section_description        | Description of the TDS section                       |
+| bcyamount_without_tds_deduction| Amount without TDS deduction in default currency      |
+| bcyamount                      | Total amount in default currency                      |
+| tds_bcyamount                  | TDS amount in default currency                        |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
