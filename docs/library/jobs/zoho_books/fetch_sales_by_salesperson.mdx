@@ -1,0 +1,60 @@
+---
+title: Fetch Sales by Salesperson
+sidebar_position: 2
+---
+
+Efficiently retrieve sales data categorized by salespersons with this dedicated job for fetching sales information from Zoho Books.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_sales_by_salesperson"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=514988583"
+/>
+
+
+### Data headers
+
+| Header                   | Description                                           |
+|--------------------------|-------------------------------------------------------|
+| invoice_sales            | Sales from invoices                                    |
+| total_sales              | Total sales (all transactions)                         |
+| invoice_sales_with_tax   | Sales from invoices including tax                      |
+| total_sales_with_tax     | Total sales including tax (all transactions)          |
+| month                    | Month of the sales data                                |
+| cn_count                 | Count of credit notes                                  |
+| cn_sales                 | Credit note sales amount                               |
+| cn_sales_with_tax        | Credit note sales amount including tax                 |
+| invoice_count            | Count of invoices                                      |
+| count                    | Total count of transactions                            |
+| sales                    | Total sales amount                                     |
+| sales_with_tax           | Total sales amount including tax                       |
+| salesperson_id           | Zoho Books ID used to refer to the salesperson          |
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select sales transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select sales transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| salesperson_id | Select transactions related to a particular contact (salesperson_id) |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

@@ -1,0 +1,56 @@
+---
+title: Fetch Tax Summary
+sidebar_position: 2
+---
+
+Summary of Tax in Zoho Books provides a detailed overview of tax-related information. This feature includes key details such as report names, taxable amounts, and individual tax components, offering valuable insights into tax-related transactions. Utilize the dedicated job, Fetch Tax Summary, to seamlessly retrieve comprehensive data from Zoho Books.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_tax_summary"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1105417384"
+/>
+
+
+### Data headers
+
+| Header                   | Description                                          |
+|--------------------------|------------------------------------------------------|
+| tax_name                 | Name of the tax                                      |
+| tax_percentage           | Tax percentage                                      |
+| transaction_amount       | Transaction amount in default currency               |
+| tax_amount               | Tax amount in default currency                       |
+| is_tax_account           | Indicates if it is a tax account                      |
+| is_value_added           | Indicates if it is value-added                        |
+| tax_id                   | Zoho Books ID for the tax                            |
+| output_tax_account_id    | Zoho Books ID for the output tax account              |
+| input_tax_account_id     | Zoho Books ID for the input tax account               |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

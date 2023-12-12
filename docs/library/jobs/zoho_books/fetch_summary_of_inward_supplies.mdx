@@ -1,0 +1,62 @@
+---
+title: Fetch Summary of Inward Supplies
+sidebar_position: 2
+---
+
+Access a succinct overview of incoming supplies with Zoho Books' Summary of Inward Supplies. This feature provides essential details such as report names, invoice amounts, taxable amounts, and individual tax components. It serves as a quick and informative snapshot, streamlining the analysis of the business's inward supply transactions. Utilize this dedicated job to fetch comprehensive data from Zoho Books.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_summary_of_inward_supplies"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1154177159"
+/>
+
+
+### Data headers
+
+| Header                      | Description                                          |
+|-----------------------------|------------------------------------------------------|
+| report_name                 | Name of the report                                   |
+| invoice_amount              | Invoice amount in default currency                   |
+| taxable_amount              | Taxable amount in default currency                   |
+| sgst                        | SGST (State Goods and Services Tax) amount           |
+| cgst                        | CGST (Central Goods and Services Tax) amount         |
+| cess                        | Cess amount                                          |
+| igst                        | IGST (Integrated Goods and Services Tax) amount      |
+| tax_return_box_type         | Type of tax return box                               |
+| description                 | Additional description                               |
+| taxable_amount_formatted    | Formatted taxable amount                             |
+| invoice_amount_formatted    | Formatted invoice amount                             |
+| cgst_formatted              | Formatted CGST amount                                |
+| cess_formatted              | Formatted cess amount                                |
+| igst_formatted              | Formatted IGST amount                                |
+| sgst_formatted              | Formatted SGST amount                                |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
