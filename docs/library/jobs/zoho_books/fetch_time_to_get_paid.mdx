@@ -8,7 +8,7 @@ sidebar_position: 2
 Time to Get Paid in Zoho Books refers to the duration it takes for invoices to be paid by customers. This metric tracks the average time between issuing an invoice and receiving payment
 
 <AddJob
-  template="gsheet_zoho_books_db_get_refund_history"
+  template="gsheet_zoho_books_db_get_time_to_get_paid"
 />
 
 
@@ -33,7 +33,14 @@ Time to Get Paid in Zoho Books refers to the duration it takes for invoices to b
 | currency_code    | Currency code associated with the amounts     |
 | customer_id      | Unique identifier for the customer            |
 
+### Filteration options
 
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
 
 
 <!---

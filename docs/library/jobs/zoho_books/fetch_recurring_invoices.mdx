@@ -27,8 +27,6 @@ Fetch Recurring Invoices in Zoho Books allows seamless retrieval of key details 
 | customer_name          | Name of the customer                                   |
 | status                 | Current status of the recurring invoice               |
 | total                  | Total amount of the recurring invoice                 |
-| customer_id            | Unique identifier for the customer                     |
-| recurring_invoice_id   | Unique identifier for the recurring invoice            |
 | recurrence_name        | Name associated with the recurrence                    |
 | reference_number       | Reference number for the recurring invoice             |
 | child_entity_type      | Type of child entity associated with the invoice       |
@@ -40,8 +38,17 @@ Fetch Recurring Invoices in Zoho Books allows seamless retrieval of key details 
 | repeat_every           | Interval for the recurrence (e.g., every 1 month)      |
 | created_time           | Time when the recurring invoice was created            |
 | last_modified_time     | Time when the recurring invoice was last modified      |
+| customer_id            | Unique identifier for the customer                     |
+| recurring_invoice_id   | Unique identifier for the recurring invoice            |
 
 
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| customer_id | Select invoices issued to a particular customer. Customer id is the id of the customer from zoho books.  |
 
 <!---
 ## Others
