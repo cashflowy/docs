@@ -1,0 +1,85 @@
+---
+title: Fetch Contacts
+sidebar_position: 2
+---
+
+
+This job fetches contact details from Zoho Books, providing comprehensive information about contacts associated with your business. It includes details such as contact names, addresses, communication details, and other relevant information.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_contacts"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1133795334"
+/>
+
+
+### Data headers
+
+| Header                             | Description                                           |
+|------------------------------------|-------------------------------------------------------|
+| contact_name                       | Name of the contact                                    |
+| customer_name                      | Name of the customer associated with the contact      |
+| vendor_name                        | Name of the vendor associated with the contact        |
+| company_name                       | Name of the company associated with the contact       |
+| website                            | Website associated with the contact                   |
+| language_code                      | Language code for the contact                          |
+| language_code_formatted            | Formatted language code for the contact                |
+| contact_type                       | Type of the contact (e.g., customer, vendor)           |
+| contact_type_formatted             | Formatted contact type                                 |
+| status                             | Status of the contact (e.g., active, inactive)        |
+| customer_sub_type                  | Subtype of the customer contact                        |
+| source                             | Source of the contact                                  |
+| is_linked_with_zohocrm             | Indicates if the contact is linked with Zoho CRM       |
+| payment_terms                      | Payment terms for the contact                          |
+| payment_terms_label                | Label for payment terms                                |
+| twitter                            | Twitter handle of the contact                         |
+| facebook                           | Facebook handle of the contact                        |
+| currency_code                      | Currency code for the contact                          |
+| outstanding_receivable_amount      | Outstanding receivable amount for the contact (default currency) |
+| outstanding_receivable_amount_bcy  | Outstanding receivable amount for the contact (base currency) |
+| outstanding_payable_amount          | Outstanding payable amount for the contact (default currency) |
+| outstanding_payable_amount_bcy      | Outstanding payable amount for the contact (base currency) |
+| unused_credits_receivable_amount   | Unused credits receivable amount for the contact (default currency) |
+| unused_credits_receivable_amount_bcy| Unused credits receivable amount for the contact (base currency) |
+| unused_credits_payable_amount       | Unused credits payable amount for the contact (default currency) |
+| unused_credits_payable_amount_bcy   | Unused credits payable amount for the contact (base currency) |
+| first_name                         | First name of the contact                              |
+| last_name                          | Last name of the contact                               |
+| email                              | Email address of the contact                           |
+| phone                              | Phone number of the contact                            |
+| mobile                             | Mobile number of the contact                           |
+| portal_status                      | Portal status of the contact                           |
+| created_time                       | Time when the contact was created                      |
+| created_time_formatted             | Formatted time when the contact was created            |
+| last_modified_time                 | Time when the contact was last modified                |
+| last_modified_time_formatted       | Formatted time when the contact was last modified      |
+| ach_supported                      | Indicates if ACH is supported for the contact         |
+| gst_treatment                      | GST treatment for the contact                          |
+| tax_treatment                      | Tax treatment for the contact                          |
+| gst_no                             | GST number for the contact                             |
+| place_of_contact                   | Place of contact for the contact                       |
+| place_of_contact_formatted         | Formatted place of contact for the contact             |
+| has_attachment                     | Indicates if the contact has any attachment            |
+| contact_id                         | Unique identifier for the contact                      |
+| currency_id                        | Unique identifier for the currency associated with the contact |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

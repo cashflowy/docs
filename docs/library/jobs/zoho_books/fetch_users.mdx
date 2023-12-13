@@ -1,0 +1,52 @@
+---
+title: Fetch Users
+sidebar_position: 2
+---
+
+
+The Zoho Books Users provides essential information about users within the Zoho Books platform. It enables you to retrieve key details such as user names, roles, and associated information.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_users"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1483968825"
+/>
+
+
+### Data headers
+
+| Header              | Description                                           |
+|---------------------|-------------------------------------------------------|
+| name                | Name of the Zoho Books user                           |
+| email               | Email address associated with the user                |
+| is_customer_segmented | Indicates if the user is segmented as a customer      |
+| is_vendor_segmented   | Indicates if the user is segmented as a vendor        |
+| user_role           | Role assigned to the user within Zoho Books           |
+| user_type           | Type of user (e.g., admin, standard)                  |
+| status              | Current status of the user (e.g., active, inactive)   |
+| is_current_user     | Indicates if the user is the current logged-in user   |
+| photo_url           | URL for the user's profile photo                      |
+| is_employee         | Indicates if the user is marked as an employee        |
+| user_id             | Unique identifier for the Zoho Books user              |
+| role_id             | Unique identifier for the user's role                  |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

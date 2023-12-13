@@ -1,0 +1,77 @@
+---
+title: Fetch Receivable Details
+sidebar_position: 2
+---
+
+
+Zoho Books Receivable Details provide comprehensive insights into outstanding customer invoices, aiding in effective accounts receivable management.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_receivable_details"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1959245052"
+/>
+
+
+### Data headers
+
+| Header             | Description                                           |
+|--------------------|-------------------------------------------------------|
+| customer_name      | Name of the customer associated with the receivable   |
+| transaction_date   | Date when the receivable transaction occurred         |
+| transaction_number | Unique identifier for the receivable transaction      |
+| reference_number   | Reference number associated with the receivable transaction |
+| status             | Status of the receivable transaction (e.g., pending, completed) |
+| transaction_type   | Type of the receivable transaction (e.g., invoice, payment) |
+| item_name          | Name of the item related to the transaction           |
+| quantity_ordered   | Quantity initially ordered for the item               |
+| bcy_item_price     | Item price in the base currency                        |
+| bcy_total          | Total amount in the base currency                      |
+| quantity_invoiced  | Quantity actually invoiced for the item                |
+| salesperson_name   | Name of the salesperson involved in the transaction    |
+| product_name       | Name of the product associated with the transaction    |
+| project_name       | Name of the project associated with the transaction    |
+| description        | Additional information or details about the transaction |
+| quantity_cancelled | Quantity cancelled in the receivable transaction        |
+| currency_code      | Currency code for the transaction                      |
+| reporting_tag      | Reporting tag associated with the receivable transaction |
+| fcy_item_price     | Item price in the foreign currency                     |
+| transaction_id     | Unique identifier for the receivable transaction        |
+| account_id         | Unique identifier for the account associated with the receivable |
+| item_id            | Unique identifier for the item related to the receivable |
+| product_id         | Unique identifier for the product related to the receivable |
+| project_id         | Unique identifier for the project related to the receivable |
+| customer_id        | Unique identifier for the customer associated with the receivable |
+| currency_id        | Unique identifier for the currency associated with the receivable |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

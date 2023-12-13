@@ -1,0 +1,58 @@
+---
+title: Fetch Trial Balance simple format
+sidebar_position: 2
+sidebar_label: Simple format
+---
+
+The Trial Balance in Zoho Books is a financial report that lists the balances of a company's general ledger accounts at a specific point in time. It ensures that debits equal credits, serving as a preliminary step in preparing financial statements.
+
+<AddJob
+  template="gsheet_zoho_books_simple_get_trial_balance"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=74278647"
+/>
+
+
+### Data headers
+
+| Header          | Description                                          |
+|-----------------|------------------------------------------------------|
+| Accounts        | Name of the related account                           |
+| Accounts Id     | Zoho Books ID of the related account                  |
+| Opening Balance  | Initial balance of the account at the beginning of the specified month |
+| Debit           | Total debit transactions during the specified month |
+| Credit          | Total credit transactions during the specified month |
+| Net Debit       | Net debit amount, considering debits and credits for the month |
+| Net Credit      | Net credit amount, considering debits and credits for the month |
+| Closing Balance  | Final balance of the account at the end of the specified month |
+| --- | --- |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

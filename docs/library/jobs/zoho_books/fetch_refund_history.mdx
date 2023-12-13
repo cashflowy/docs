@@ -1,0 +1,68 @@
+---
+title: Fetch Refund History
+sidebar_position: 2
+---
+
+
+
+
+Zoho Books Refund History provides a concise record of refund transactions, including details such as date, mode, currency, customer, and amounts. 
+<AddJob
+  template="gsheet_zoho_books_db_get_refund_history"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=20036559"
+/>
+
+
+### Data headers
+
+| Header                   | Description                                          |
+|--------------------------|------------------------------------------------------|
+| date                     | Date of the refund                                   |
+| refund_mode              | Mode of refund (e.g., Cash, Bank Transfer)            |
+| currency_code            | Currency code of the refund                          |
+| customer_name            | Customer name                                       |
+| reference_number         | Reference number of the refund                       |
+| entity_number            | Entity number associated with the refund             |
+| refund_from_account_name | Account name from which the refund is processed      |
+| entity_type              | Type of entity (e.g., Invoice, Credit Note)          |
+| description              | Description of the refund                            |
+| bcy_amount               | Refund amount in base currency                       |
+| fcy_amount               | Refund amount in foreign currency                    |
+| customer_id              | Zoho Books ID for the customer                       |
+| refund_id                | Zoho Books ID for the refund                         |
+| entity_id                | Zoho Books ID for the associated entity (e.g., Invoice, Credit Note)|
+| refund_from_account_id   | Zoho Books ID for the account from which the refund is processed|
+| ym                       | Year month of the entry in YYYY-MM format            |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

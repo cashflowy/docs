@@ -1,0 +1,58 @@
+---
+title: Fetch Vendor Balances
+sidebar_position: 2
+---
+
+
+
+Vendor Balances offers a quick snapshot of outstanding balances and transaction details with vendors in Zoho Books. Easily manage payments and optimize financial decisions based on up-to-date vendor information.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_vendor_balances"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1688811564"
+/>
+
+
+### Data headers
+
+| Header          | Description                                           |
+|-----------------|-------------------------------------------------------|
+| vendor_name     | Name of the vendor                                    |
+| bill_balance    | Remaining balance from vendor bills                   |
+| excess_payment  | Excess payment amount with the vendor                 |
+| fcy_balance     | Remaining balance in foreign currency                 |
+| bcy_balance     | Remaining balance in base currency                    |
+| vendor_id       | Unique identifier for the vendor                       |
+| currency_id     | Unique identifier for the currency                     |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|                                                                                   
+| report_date | Filter transactions based on the reporting date. Selects transactions as of the specified date. Format - `YYYY-MM-DD` |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

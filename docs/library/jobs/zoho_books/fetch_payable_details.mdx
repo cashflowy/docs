@@ -1,0 +1,78 @@
+---
+title: Fetch Payable Details
+sidebar_position: 2
+---
+
+
+
+Payable Details in Zoho Books give a thorough overview of outstanding bills, providing detailed info on due dates, amounts, and statuses. Manage payables efficiently, track payment schedules, and gain insights into financial liabilities with ease.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_payable_details"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1968645491"
+/>
+
+
+### Data headers
+
+| Header             | Description                                           |
+|--------------------|-------------------------------------------------------|
+| transaction_date   | Date of the transaction                                |
+| status             | Status of the transaction                              |
+| transaction_number | Unique identifier for the transaction                  |
+| vendor_name        | Name of the vendor                                     |
+| transaction_type   | Type of the transaction (e.g., bill, payment)          |
+| item_name          | Name of the item associated with the transaction       |
+| quantity_ordered   | Quantity of items ordered                              |
+| bcy_item_price     | Base currency item price                               |
+| bcy_total          | Total amount in base currency                          |
+| customer_name      | Name of the customer                                    |
+| description        | Description of the transaction                         |
+| project_name       | Name of the project                                    |
+| reporting_tag      | Reporting tag associated with the transaction          |
+| product_name       | Name of the product                                    |
+| entity_type        | Type of entity associated with the transaction         |
+| fcy_item_price     | Foreign currency item price                            |
+| currency_code      | Currency code for the transaction                      |
+| project_id         | Unique identifier for the project                      |
+| product_id         | Unique identifier for the product                      |
+| invoice_id         | Unique identifier for the invoice                      |
+| transaction_id     | Unique identifier for the transaction                  |
+| item_id            | Unique identifier for the item                         |
+| account_id         | Unique identifier for the account                       |
+| vendor_id          | Unique identifier for the vendor                        |
+| customer_id        | Unique identifier for the customer                      |
+| currency_id        | Unique identifier for the currency                      |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

@@ -1,0 +1,58 @@
+---
+title: Fetch Customer Balances
+sidebar_position: 2
+---
+
+
+Zoho Books' Customer Balances job retrieves essential information about outstanding amounts and financial standing for your customers.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_customer_balances"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=2111443283"
+/>
+
+
+### Data headers
+
+| Header             | Description                                             |
+|--------------------|---------------------------------------------------------|
+| customer_name      | Name of the customer associated with the balances        |
+| invoice_balance    | The outstanding balance on customer invoices             |
+| available_credits  | Credits available to the customer for future transactions|
+| credit_limit       | The specified credit limit for the customer              |
+| fcy_balance        | The balance in foreign currency (FCY)                   |
+| bcy_balance        | The balance in base currency (BCY)                       |
+| customer_id        | Unique identifier for the customer                       |
+| currency_id        | Unique identifier for the currency associated with the balances |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|                                                                                  
+| report_date | Filter transactions based on the reporting date. Selects transactions as of the specified date. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

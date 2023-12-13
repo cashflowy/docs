@@ -1,0 +1,55 @@
+---
+title: Fetch Vendor Balance Summary
+sidebar_position: 2
+---
+
+
+
+Vendor Balance Summary offers a quick snapshot of outstanding balances and transaction details with vendors in Zoho Books. Easily manage payments and optimize financial decisions based on up-to-date vendor information.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_vendor_balance_summary"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1691982332"
+/>
+
+
+### Data headers
+
+| Header           | Description                                           |
+|------------------|-------------------------------------------------------|
+| vendor_name      | Name of the vendor                                    |
+| billed_amount    | Total amount billed by the vendor                      |
+| amount_paid      | Total amount paid to the vendor                        |
+| closing_balance  | Remaining balance with the vendor                      |
+| vendor_id        | Unique identifier for the vendor                       |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
