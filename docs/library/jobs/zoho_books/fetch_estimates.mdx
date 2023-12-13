@@ -1,0 +1,73 @@
+---
+title: Fetch Estimates
+sidebar_position: 2
+---
+
+
+
+Zoho Books Estimates simplify quoting by creating professional quotes for clients. Track details, client interactions, and project approvals efficiently. Ensure transparent communication with features like balance tracking, attachments, and revision management.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_estimates"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1625528809"
+/>
+
+
+### Data headers
+
+
+| Header                  | Description                                              |
+|-------------------------|----------------------------------------------------------|
+| date                    | Date of the expense                                      |
+| account_name            | Name of the associated account                           |
+| currency_code           | Currency code for the transaction                        |
+| total_without_tax       | Total expense amount without taxes                       |
+| total                   | Total expense amount including taxes                     |
+| paid_through_account_name| Name of the account used for payment                      |
+| description             | Description of the expense                                |
+| reference_number        | Reference number for the expense                          |
+| vendor_name             | Name of the vendor                                       |
+| expense_receipt_name    | Name of the receipt attached to the expense              |
+| bcy_total_without_tax   | Total expense amount without taxes in the base currency |
+| bcy_total               | Total expense amount including taxes in the base currency|
+| created_time            | Time when the expense was created                        |
+| last_modified_time      | Time when the expense was last modified                  |
+| exchange_rate           | Exchange rate for the transaction                        |
+| has_attachment          | Indicates if the expense has an attachment               |
+| vendor_id               | Unique identifier for the vendor                         |
+| expense_id              | Unique identifier for the expense                        |
+| ym                      | Year and month of the entry in YYYY-MM format            |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select invoice with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select invoices with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| customer_id | Select invoices issued to a particular customer. Customer id is the id of the customer from zoho books.  |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

@@ -1,0 +1,58 @@
+---
+title: Fetch General Ledger
+sidebar_position: 2
+---
+
+The General Ledger provides a comprehensive and chronological record of all financial transactions within an organization. It includes details such as credits, debits, and balances for each account, offering a complete overview of financial activities.
+
+
+<AddJob
+  template="gsheet_zoho_books_db_get_general_ledger"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1236537788"
+/>
+
+
+### Data headers
+
+| Header           | Description                                           |
+|-----------------|-------------------------------------------------------|
+| name            | Name or description of the account                    |
+| credit_total    | Total credit amount for the specified period         |
+| debit_total     | Total debit amount for the specified period          |
+| balance         | Current balance of the account                        |
+| is_debit        | Indicates if the account is a debit account (TRUE/FALSE) |
+| account_code    | Code associated with the account                      |
+| account_id      | Unique identifier for the account                     |
+| ym              | Year and month corresponding to the entry            |
+
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

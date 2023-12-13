@@ -1,0 +1,64 @@
+---
+title: Fetch Vendor Refund History
+sidebar_position: 2
+---
+
+
+
+Effortlessly monitor vendor refunds in Zoho Books with the Vendor Balance Refund History. Gain insights into transaction details and amounts, streamlining your vendor balance management.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_vendor_refund_history"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=238917616"
+/>
+
+
+### Data headers
+
+| Header            | Description                                           |
+|-------------------|-------------------------------------------------------|
+| date              | Date of the refund transaction                        |
+| refund_mode       | Mode of the refund (e.g., credit note, bank transfer)  |
+| entity_type       | Type of entity associated with the refund              |
+| entity_number     | Entity number associated with the refund               |
+| vendor_name       | Name of the vendor receiving the refund                |
+| bcy_amount        | Refund amount in base currency                         |
+| reference_number  | Reference number for the refund                        |
+| fcy_amount        | Refund amount in foreign currency                      |
+| description       | Description of the refund transaction                 |
+| currency_code     | Currency code for the refund transaction              |
+| entity_id         | Unique identifier for the associated entity            |
+| refund_id         | Unique identifier for the refund transaction           |
+| vendor_id         | Unique identifier for the vendor receiving the refund  |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

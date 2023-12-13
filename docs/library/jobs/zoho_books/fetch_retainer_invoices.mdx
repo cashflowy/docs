@@ -1,0 +1,64 @@
+---
+title: Fetch Retainer Invoices
+sidebar_position: 2
+---
+
+
+The Zoho Books Retainer Invoices streamline billing for pre-paid services, allowing efficient tracking and invoicing. Ideal for businesses with ongoing service agreements, enhancing transparency and financial management.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_retainer_invoices"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=36538629"
+/>
+
+
+### Data headers
+
+| Header                  | Description                                           |
+|-------------------------|-------------------------------------------------------|
+| date                    | Date of the retainer invoice                           |
+| customer_name           | Name of the customer                                   |
+| status                  | Current status of the retainer invoice                 |
+| total                   | Total amount of the retainer invoice                   |
+| customer_id             | Unique identifier for the customer                     |
+| retainerinvoice_number  | Retainer invoice number                                |
+| color_code              | Color code associated with the retainer invoice        |
+| current_sub_status      | Current sub-status of the retainer invoice             |
+| reference_number        | Reference number for the retainer invoice               |
+| project_or_estimate_name| Name of the project or estimate associated with the invoice |
+| project_name            | Name of the project associated with the invoice        |
+| estimate_number         | Estimate number associated with the retainer invoice   |
+| currency_code           | Currency code for the retainer invoice                 |
+| is_viewed_by_client     | Indicates whether the invoice has been viewed by the client |
+| client_viewed_time      | Time when the client viewed the invoice                |
+| balance                 | Remaining balance for the retainer invoice             |
+| created_time            | Time when the retainer invoice was created             |
+| last_modified_time      | Time when the retainer invoice was last modified      |
+| is_emailed              | Indicates whether the invoice has been emailed         |
+| last_payment_date       | Date of the last payment made for the retainer invoice  |
+| has_attachment          | Indicates if the retainer invoice has attachments      |
+| retainerinvoice_id      | Unique identifier for the retainer invoice             |
+| current_sub_status_id   | Unique identifier for the current sub-status           |
+| ym                      | Year and month corresponding to the entry              |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

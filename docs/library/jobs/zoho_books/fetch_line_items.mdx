@@ -1,0 +1,72 @@
+---
+title: Fetch Line Items
+sidebar_position: 2
+---
+
+
+
+Zoho Books Line Items efficiently record product/service details in invoices, including description, quantity, price, taxes, and discounts. Subtotal and grand total calculations streamline invoicing, with clear currency codes for precise financial tracking
+
+<AddJob
+  template="gsheet_zoho_books_db_get_line_items"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1665945954"
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1665945954"
+/>
+
+
+### Data headers
+
+| Header            | Description                                           |
+|-------------------|-------------------------------------------------------|
+| date              | Date of the invoice                                   |
+| customer_name     | Name of the customer                                  |
+| invoice_number    | Invoice number                                        |
+| currency_code     | Currency code for the transaction                     |
+| product_type      | Type of product                                       |
+| name              | Name of the item                                      |
+| internal_name     | Internal name of the item                              |
+| description       | Description of the item                                |
+| unit              | Unit of measurement for the item                       |
+| quantity          | Quantity of the item                                   |
+| rate              | Rate per unit of the item                              |
+| bcy_rate          | Rate per unit in base currency                         |
+| discount          | Discount applied                                      |
+| account_name      | Name of the account associated with the item           |
+| tax_name          | Name of the tax applied                                |
+| tax_percentage    | Percentage of tax applied                              |
+| item_total        | Total amount for the item                              |
+| hsn_or_sac        | HSN or SAC code                                       |
+| exchange_rate     | Exchange rate for the transaction                      |
+| invoice_status    | Status of the invoice                                  |
+
+        
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

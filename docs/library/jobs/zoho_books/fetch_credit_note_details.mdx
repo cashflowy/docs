@@ -1,0 +1,61 @@
+---
+title: Fetch Credit Note Details
+sidebar_position: 2
+---
+
+Zoho Books Credit Note Details provide a concise overview of issued credit notes. It includes essential information such as the customer's name, credit note number, date, and total amount. 
+
+<AddJob
+  template="gsheet_zoho_books_db_get_credit_note_details"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=87290682"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|--------|-------------|
+| date | Date of the credit note |
+| creditnote_number | Credit note number |
+| status | Current status of the credit note |
+| reference_number | Reference number associated with the credit note |
+| customer_name | Name of the customer |
+| exchange_rate | Exchange rate used for the transaction |
+| bcy_total | Total amount in the base currency |
+| bcy_balance | Balance amount in the base currency |
+| currency_code | Currency code used in the transaction |
+| project_names | Names of the associated projects |
+| creditnote_id | Zoho Books ID for the credit note |
+| customer_id | Zoho Books ID for the related customer |
+| sales_person_id | Zoho Books ID for the salesperson |
+| ym | Year and month of the entry in YYYY-MM format |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

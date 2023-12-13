@@ -1,0 +1,49 @@
+---
+title: Fetch Time To Get Paid
+sidebar_position: 2
+---
+
+
+
+Time to Get Paid in Zoho Books refers to the duration it takes for invoices to be paid by customers. This metric tracks the average time between issuing an invoice and receiving payment
+
+<AddJob
+  template="gsheet_zoho_books_db_get_refund_history"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1436650474"
+/>
+
+
+### Data headers
+
+| Header          | Description                                   |
+|------------------|-----------------------------------------------|
+| customer_name    | Name of the customer                           |
+| range_0-15       | Total outstanding amount aged 0-15 days        |
+| range_16-30      | Total outstanding amount aged 16-30 days       |
+| range_31-45      | Total outstanding amount aged 31-45 days       |
+| range_above45    | Total outstanding amount aged above 45 days    |
+| currency_code    | Currency code associated with the amounts     |
+| customer_id      | Unique identifier for the customer            |
+
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

@@ -1,0 +1,54 @@
+---
+title: Fetch Account Type Summary
+sidebar_position: 2
+---
+
+Account Type Summary retrieves a concise overview of various account types, detailing their credits, debits, and total amounts. Use this feature to quickly assess the financial distribution across different account categories in your records.
+
+
+<AddJob
+  template="gsheet_zoho_books_db_get_account_type_summary"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=779163475"
+/>
+
+
+### Data headers
+
+| Header          | Description                                           |
+|-----------------|-------------------------------------------------------|
+| account_type    | Type of the account (e.g., assets, liabilities, income, expenses) |
+| credit          | Total credit amount associated with the account type    |
+| debit           | Total debit amount associated with the account type     |
+| account_type_id | Unique identifier/code for the account type             |
+| ym              | Year and month corresponding to the entry              |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
