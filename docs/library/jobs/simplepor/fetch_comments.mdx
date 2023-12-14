@@ -1,0 +1,57 @@
+---
+title: Fetch Comments
+sidebar_position: 2
+---
+
+
+This job represents user-generated textual entries that provide additional information, explanations, or updates related to various activities. They contain details such as content, POR number, user name, email, creation and update timestamps, along with unique identifiers. 
+
+<AddJob
+  template="gsheet_simplepor_db_comments"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=1574285891"
+/>
+
+
+### Data headers
+
+| Header     | Description |
+|--------|-------------|
+| comment    | Comment content associated with a Purchase Order Request (POR) |
+| por_no     | Purchase Order Request (POR) number |
+| user       | User's name who posted the comment |
+| user_email | User's email address who posted the comment |
+| createdAt  | Timestamp indicating when the comment was created |
+| updatedAt  | Timestamp indicating the last update time of the comment |
+| id         | Unique identifier for the comment |
+| por_id     | Unique identifier for the associated Purchase Order Request (POR) |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

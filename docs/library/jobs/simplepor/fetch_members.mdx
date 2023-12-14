@@ -1,0 +1,53 @@
+---
+title: Fetch Members
+sidebar_position: 2
+---
+
+This job provides essential information about members within the Simplepor platform. It enables you to retrieve key details such as user names, roles, and associated information.
+
+<AddJob
+  template="gsheet_simplepor_db_members"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=1795842351"
+/>
+
+
+### Data headers
+
+| Header              | Description                                           |
+|---------------------|-------------------------------------------------------|
+| name                | Name of the Simplepor's user                           |
+| email               | Email address associated with the user                |
+| type         | Type or category of the user                 |
+| createdAt    | Date and time when the user was created          |
+| updatedAt    | Date and time when the user was last updated    |
+| id           | ID for the activity                     |
+| user_id             | ID for the Simplepor user              |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

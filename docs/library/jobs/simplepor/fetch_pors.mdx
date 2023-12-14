@@ -1,0 +1,78 @@
+---
+title: Fetch PORS
+sidebar_position: 2
+---
+
+This job represents essential details such as date, type, vendor information, status, total amounts, tax details, line items, associated documents, payment terms, and more. 
+
+<AddJob
+  template="gsheet_simplepor_db_pors"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=39756839"
+/>
+
+
+### Data headers
+
+| Header            | Description                                             |
+|-------------------|---------------------------------------------------------|
+| date              | Date of the purchase order |
+| remote_id         | Remote ID for the purchase order                |
+| type              | Type of the purchase order                               |
+| vendor            | Name of the vendor associated with the purchase order    |
+| status            | Current status of the purchase order                     |
+| submitted_by      | Name of the user who submitted the purchase order        |
+| submitted_by_email| Email of the user who submitted the purchase order       |
+| budget            | Name of the budget associated with the purchase order    |
+| budget_code       | Code of the budget associated with the purchase order    |
+| currency          | Currency used in the purchase order                       |
+| basic_total       | Total amount excluding taxes and additional charges      |
+| taxes_total       | Total taxes associated with the purchase order            |
+| grand_total       | Grand total including basic amount, taxes, and charges   |
+| tds_total         | Total TDS (Tax Deducted at Source) for the purchase order |
+| rcm_total         | Total Reverse Charge Mechanism amount                     |
+| line_items        | Number of line items in the purchase order                |
+| invoice_date      | Date of the associated invoice |
+| documents         | Number of documents attached to the purchase order       |
+| incoterms         | Details about the Incoterms for the purchase order        |
+| advance_needed    | Indicator if advance payment is needed                   |
+| is_paid_out       | Indicates whether the purchase order is paid out         |
+| payment_process   | Payment process associated with the purchase order       |
+| payment_terms     | Payment terms for the purchase order                      |
+| hold_payment      | Holds information about whether payment is on hold        |
+| createdAt         | Timestamp when the purchase order was created             |
+| updatedAt         | Timestamp when the purchase order was last updated        |
+| id                | ID for the purchase order                  |
+| submitted_by_id   | ID for the user who submitted the purchase order |
+| vendor_id         | ID for the vendor associated with the purchase order |
+| budget_id         | ID for the budget associated with the purchase order |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

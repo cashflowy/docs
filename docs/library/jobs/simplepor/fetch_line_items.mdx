@@ -1,0 +1,79 @@
+---
+title: Fetch Line Items 
+sidebar_position: 2
+---
+
+This job efficiently record product/service details in invoices, including description, quantity, price, taxes, and discounts. Subtotal and grand total calculations streamline invoicing, with clear currency codes for precise financial tracking
+
+<AddJob
+  template="gsheet_simplepor_db_line_items"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=1991804501"
+/>
+
+
+### Data headers
+
+| Header                  | Description                                            |
+|-------------------------|--------------------------------------------------------|
+| por_date                | Purchase order date                                    |
+| por_no                  | Remote ID associated with the purchase order           |
+| li_item_name            | Name of the line item in the purchase order             |
+| li_gst                  | GST information for the line item                      |
+| li_quantity             | Quantity of the line item                              |
+| li_cost                 | Cost of the line item                                   |
+| li_total                | Total amount for the line item                          |
+| li_tds                  | TDS information for the line item                       |
+| li_tds_amount           | TDS amount for the line item                            |
+| li_rcm_amount           | RCM amount for the line item                            |
+| li_rcm_percentage       | RCM percentage for the line item                        |
+| por_currency            | Currency used in the purchase order                     |
+| por_type                | Type of the purchase order (e.g., standard, recurring) |
+| por_vendor              | Name of the vendor associated with the purchase order   |
+| por_status              | Status of the purchase order                            |
+| por_submitted_by        | Name of the user who submitted the purchase order       |
+| por_submitted_by_email  | Email of the user who submitted the purchase order      |
+| por_budget              | Name of the budget associated with the purchase order   |
+| por_budget_code         | Code of the budget associated with the purchase order   |
+| por_invoice_date        | Invoice date in the purchase order (substring to show only the date) |
+| por_documents           | Number of documents attached to the purchase order      |
+| por_is_paid_out         | Indicates if the purchase order is paid out             |
+| por_payment_process     | Payment process associated with the purchase order     |
+| por_payment_terms       | Payment terms associated with the purchase order        |
+| por_hold_payment        | Indicates if payments for the purchase order are on hold |
+| por_createdAt           | Date and time when the purchase order was created       |
+| por_updatedAt           | Date and time when the purchase order was last updated  |
+| por_id                  | ID for the purchase order                               |
+| por_submitted_by_id     | ID for the user who submitted the purchase order        |
+| por_vendor_id           | ID for the vendor associated with the purchase order    |
+| por_budget_id           | ID for the budget associated with the purchase order    |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

@@ -1,0 +1,57 @@
+---
+title: Fetch Documents
+sidebar_position: 2
+---
+
+
+This job represents to digital files and attachments associated with various transactions, entities, or records within the platform. These files can include invoices, receipts, contracts, or any relevant document related to financial transactions.
+
+<AddJob
+  template="gsheet_simplepor_db_documents"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=353672401"
+/>
+
+
+### Data headers
+
+| Header       | Description                                          |
+|--------------|------------------------------------------------------|
+| filename     | Name of the document file                            |
+| por_no       | Remote ID associated with the purchase order         |
+| type         | Type or category of the document                     |
+| filetype     | Format or extension of the document file             |
+| size         | Size of the document file in bytes                   |
+| createdAt    | Date and time when the document was created          |
+| updatedAt    | Date and time when the document was last updated    |
+| id           | Unique identifier for the document                   |
+| por_id       | Unique identifier for the associated purchase order |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

@@ -1,0 +1,58 @@
+---
+title: Fetch Approvals
+sidebar_position: 2
+---
+
+This job provide information about actions taken, users involved, and specific details related to approvals. It helps users understand and track approval-related activities easily within the platform.
+
+<AddJob
+  template="gsheet_simplepor_db_approvals"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=975215956"
+/>
+
+
+### Data headers
+
+| Header          | Description                                           |
+|-----------------|-------------------------------------------------------|
+| por             | Remote ID of the purchase order                        |
+| level           | Approval level                                       |
+| approver        | Name of the approver                                  |
+| approver_email  | Email of the approver                                 |
+| status          | Approval status                                      |
+| comments        | Comments provided during the approval process         |
+| createdAt       | Timestamp of creation                                 |
+| updatedAt       | Timestamp of the last update                          |
+| id              | Unique identifier for the approval entry              |
+| por_id          | ID of the associated purchase order                   |
+| approver_id     | ID of the approver                                    |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
