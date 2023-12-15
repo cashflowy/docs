@@ -1,0 +1,63 @@
+---
+title: Fetch Budgets
+sidebar_position: 2
+---
+
+This job represents a financial plan, detailing expected revenues and expenses. It includes allocated amounts, committed funds, and actual spending. Approvers oversee budget adherence, ensuring financial goals align with organizational objectives.
+ 
+<AddJob
+  template="gsheet_simplepor_db_budgets"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=1775976069"
+/>
+
+
+### Data headers
+
+| Header                | Description                                           |
+|-----------------------|-------------------------------------------------------|
+| code                  | Budget code                           |
+| name                  | Name of the budget                                    |
+| value                 | Total budget value                                    |
+| committed             | Amount committed from the budget                      |
+| paid_out              | Amount paid out from the budget                        |
+| available_amount      | Remaining amount available in the budget              |
+| approver_level_1      | Name of the first-level approver                       |
+| approver_level_1_email | Email of the first-level approver                      |
+| approver_level_2      | Name of the second-level approver                      |
+| approver_level_2_email | Email of the second-level approver                     |
+| createdAt             | Timestamp of creation                                 |
+| updatedAt             | Timestamp of the last update                          |
+| id                    | Unique identifier for the budget entry                 |
+| approver_level_1_id   | ID of the first-level approver                         |
+| approver_level_2_id   | ID of the second-level approver                        |
+
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
