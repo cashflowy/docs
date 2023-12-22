@@ -1,0 +1,77 @@
+---
+title: Fetch Items
+sidebar_position: 2
+---
+
+
+The Zoho Books List Items simplifies tracking, categorizing, and updating product details, enhancing inventory control and ensuring accurate financial records
+
+
+<AddJob
+  template="gsheet_zoho_books_db_get_items"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=760434528"
+/>
+
+
+### Data headers
+
+| Header                      | Description                                               |
+|-----------------------------|-----------------------------------------------------------|
+| name                        | Unique identifier for the item.                            |
+| item_name                   | The name or title of the item.                             |
+| unit                        | Unit of measurement for the item.                          |
+| status                      | Current status of the item.                                |
+| source                      | Source information for the item.                           |
+| is_linked_with_zohocrm      | Indicates if the item is linked with Zoho CRM.             |
+| description                 | Detailed description of the item.                          |
+| rate                        | Price or rate associated with the item.                    |
+| tax_name                    | The name of the tax applied to the item.                   |
+| tax_percentage              | The percentage of tax applied to the item.                 |
+| purchase_account_name       | The name of the purchase account associated with the item. |
+| account_name                | The name of the account associated with the item.          |
+| purchase_description        | Description for purchase transactions related to the item. |
+| purchase_rate               | Purchase rate for the item.                                |
+| item_type                   | The type or category of the item.                          |
+| product_type                | Type of product (if applicable).                           |
+| is_taxable                  | Indicates if the item is taxable.                          |
+| tax_exemption_code          | Code for tax exemption (if applicable).                   |
+| has_attachment              | Indicates if the item has attachments.                     |
+| sku                         | Stock Keeping Unit (SKU) for the item.                     |
+| image_name                  | Name of the item's associated image.                       |
+| image_type                  | Type of the item's associated image.                       |
+| created_time                | Timestamp indicating when the item was created.            |
+| last_modified_time          | Timestamp indicating when the item was last modified.     |
+| hsn_or_sac                  | Harmonized System Nomenclature (HSN) or Service Accounting Code (SAC) for the item. |
+| show_in_storefront          | Indicates if the item is visible in the storefront.        |
+| cf_payment_type             | Custom field for payment type.                             |
+| cf_payment_type_unformatted | Unformatted custom field for payment type.                 |
+| item_id                     | Zoho books id for the item.                            |
+| zcrm_product_id             | Zoho books id for ZCRM product.                             |
+| tax_id                      | Zoho books id for the associated tax.                         |
+| account_id                  | Zoho books id for the associated account.                     |
+| purchase_account_id         | Zoho books id for the associated purchase account.           |
+| tax_exemption_id            | Zoho books id for the associated tax exemption.               |
+| image_document_id           | Zoho books id for the associated image document.             |
+
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

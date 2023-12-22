@@ -1,0 +1,60 @@
+---
+title: Fetch Purchase Orders Details
+sidebar_position: 2
+---
+
+This job fetches Purchase Orders Details from Zoho Books. In Zoho Books, Purchase Orders are documents that businesses use to request goods or services from vendors. 
+
+<AddJob
+  template="gsheet_zoho_books_db_get_purchase_orders_details"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1427436477"
+/>
+
+
+### Data headers
+
+| Header               | Description                                       |
+|----------------------|---------------------------------------------------|
+| date                 | Date of the purchase order                        |
+| vendor_name          | Name of the vendor                                |
+| order_status         | Status of the purchase order                      |
+| purchaseorder_number | Purchase order number                             |
+| reference_number     | Reference number associated with the order        |
+| delivery_date        | Delivery date                                     |
+| currency_code        | Currency code                                     |
+| price_precision      | Price precision                                   |
+| bcy_total            | Total amount in base currency (BCY)               |
+| project_names        | Associated project names                          |
+| purchaseorder_id     | Purchase order ID                                 |
+| vendor_id            | Vendor ID                                         |
+| currency_id          | Currency ID                                       |
+| ym                   | Calculated year-month based on the purchase date  |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| vendor_id | Filter by the ID of the vendor associated with the purchase order |
+| status | Search purchase order by purchase order status. Options: `All`,`draft`, `open`, `billed` and `cancelled` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

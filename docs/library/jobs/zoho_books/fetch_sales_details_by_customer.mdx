@@ -1,0 +1,63 @@
+---
+title: Fetch Sales Details by Customer
+sidebar_position: 2
+---
+
+This job provides a detailed summary of transactions with each customer, including invoiced amounts, payments received, and outstanding 
+
+<AddJob
+  template="gsheet_zoho_books_db_get_sales_details_by_customer"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=926943976"
+/>
+
+
+### Data headers
+
+
+| Header                 | Description                                          |
+|------------------------|------------------------------------------------------|
+| date                   | The date of the transaction.                          |
+| transaction_type      | The type of transaction (e.g., sale, refund).        |
+| status                 | The current status of the transaction.               |
+| transaction_number    | Unique identifier for the transaction.               |
+| invoice_number         | Identifier associated with the invoice.              |
+| sales                  | Total sales amount.                                  |
+| sales_with_tax         | Sales amount including taxes.                        |
+| item_total             | Total cost of items in the transaction.              |
+| item_total_with_tax    | Item total including taxes.                          |
+| balance                | Remaining balance after the transaction.            |
+| account_type           | Type of account involved (e.g., income, expense).   |
+| transaction_id         | Zoho books id for the transaction.              |
+| account_id             | Zoho books id for the associated account.              |
+| ym                     | Calculated year-month based on the transaction date.|
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select sales transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select sales transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

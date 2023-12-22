@@ -1,0 +1,62 @@
+---
+title: Fetch Realized Gain Or Loss 
+sidebar_position: 2
+---
+
+
+
+In Zoho Books, Realized Gain or Loss Details provides information about completed transactions, particularly those involving gains or losses. Key attributes include:
+
+<AddJob
+  template="gsheet_zoho_books_db_get_realized_gain_or_loss"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1651919225"
+/>
+
+
+### Data headers
+
+### Zoho Books: Line Items Table
+
+| Header                      | Description                                            |
+|-----------------------------|--------------------------------------------------------|
+| transaction_date            | The date of the transaction.                            |
+| realized_amount             | The actual amount realized from the transaction.        |
+| exchange_rate               | The rate used for currency exchange.                    |
+| transaction_type            | The type of transaction.                                |
+| currency_code               | The currency code used for the transaction.            |
+| gain_or_loss                | The calculated gain or loss from the transaction.       |
+| transaction_type_formatted | The formatted representation of the transaction type.   |
+| transaction_id              | Zoho books id for the transaction.                  |
+| customer_id                 | Zoho books id for the associated customer.         |
+
+        
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

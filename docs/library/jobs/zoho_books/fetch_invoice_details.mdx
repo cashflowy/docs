@@ -1,0 +1,65 @@
+---
+title: Fetch Invoice Details
+sidebar_position: 2
+---
+
+This job fetches invoice details from zoho books and provides comprehensive information about invoices, providing insights into various critical attributes.. 
+
+<AddJob
+  template="gsheet_zoho_books_db_get_invoice_details"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=858454348"
+/>
+
+### Data headers
+
+| Header            | Description                                               |
+|-------------------|-----------------------------------------------------------|
+| date              | The date of the invoice.                                   |
+| status            | The status of the invoice.                                 |
+| due_date          | The due date for payment.                                  |
+| invoice_number    | The unique identifier for the invoice.                     |
+| reference_number  | A reference number associated with the invoice.            |
+| customer_name     | The name of the customer.                                  |
+| bcy_total         | The total amount in base currency (BCY).                  |
+| bcy_balance       | The remaining balance in base currency.                   |
+| project_names     | Names of the projects associated with the invoice.        |
+| currency_code     | The currency code used for the transaction.               |
+| price_precision   | Precision of the price.                                   |
+| is_emailed        | A boolean indicating whether the invoice has been emailed.|
+| reminders_sent    | The number of reminders sent for payment.                 |
+| exchange_rate     | The exchange rate used for currency conversion.           |
+| type              | The type of the invoice.                                   |
+| invoice_id        | Zoho books id for the invoice.                    |
+| salesperson_id    | The identifier for the salesperson associated with the invoice. |
+| currency_id       | The identifier for the currency used.                     |
+| customer_id       | Zoho books id for the customer.                   |
+| ym                | Calculated year-month based on the invoice date.          |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select invoice with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select invoices with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
