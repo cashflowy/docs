@@ -38,14 +38,17 @@ This job fetches Purchase Orders Details from Zoho Books. In Zoho Books, Purchas
 | ym                   | Calculated year-month based on the purchase date  |
 
 
+
 ### Filteration options
 
 This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
 
 | Parameter | Options |
 |----|----|
-| vendor_id | Filter by the ID of the vendor associated with the purchase order |
-| status | Search purchase order by purchase order status. Options: `All`,`draft`, `open`, `billed` and `cancelled` |
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
 
 <!---
 ## Others
