@@ -1,0 +1,65 @@
+---
+title: Fetch Transactions For Account 
+sidebar_position: 2
+---
+
+This job provides information on financial transactions linked to a specific account.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_transactions_for_account"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1221692596"
+/>
+
+### Data headers
+
+| Header                    | Description                                            |
+|---------------------------|--------------------------------------------------------|
+| transaction_type          | Type of financial transaction.                         |
+| transaction_date          | Date of the financial transaction.                      |
+| transaction_type_formatted | Formatted representation of the transaction type.      |
+| payee                     | The payee or recipient of the transaction.             |
+| description               | Description of the financial transaction.              |
+| entry_number              | Unique entry number for the transaction.               |
+| currency_code             | The currency code used in the transaction.             |
+| debit_or_credit           | Indicates if the transaction is a debit or credit.     |
+| offset_account_name       | Name of the offset account in the transaction.         |
+| reference_number          | Reference number associated with the transaction.      |
+| debit_amount              | Amount debited in the transaction.                     |
+| credit_amount             | Amount credited in the transaction.                    |
+| fcy_debit_amount          | Foreign currency equivalent of the debited amount.     |
+| fcy_credit_amount         | Foreign currency equivalent of the credited amount.    |
+| transaction_id            | Unique identifier for the transaction.                 |
+| account_id                | Unique identifier for the associated account.          |
+| customer_id               | Unique identifier for the associated customer.         |
+| currency_id               | Unique identifier for the currency used in the transaction. |
+| categorized_transaction_id | Zoho books id for the categorized transaction.     |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| account_id  | Filter bills associated with a specific account using the account id. |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

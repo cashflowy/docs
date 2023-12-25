@@ -1,0 +1,68 @@
+---
+title: Fetch Business Performance Ratios 
+sidebar_position: 2
+---
+
+
+This job fetches Business Performance Ratios from zoho books.It evaluate financial health with key ratios like profitability, liquidity, efficiency, debt management, and market ratios.
+
+
+<AddJob
+  template="gsheet_zoho_books_db_get_business_performance_ratios"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1049060076"
+/>
+
+
+### Data headers
+
+| Header                     | Description                                                |
+|----------------------------|------------------------------------------------------------|
+| date                       | The date associated with the ratios.                        |
+| from_date                  | Start date for the ratio calculation period.                |
+| to_date                    | End date for the ratio calculation period.                  |
+| numerator                  | Numerator value used in ratio calculations.                 |
+| denominator                | Denominator value used in ratio calculations.               |
+| ratio                      | Calculated ratio based on the provided values.              |
+| ratio_prev                 | Ratio value from the previous period.                       |
+| last_twelve_months         | Ratio calculated over the last twelve months.               |
+| pre_last_twelve_months     | Ratio from the twelve months preceding the last twelve months. |
+| diff_last_twelve_months    | The difference between the last twelve months and the preceding twelve months. |
+| last_six_months            | Ratio calculated over the last six months.                  |
+| pre_last_six_months        | Ratio from the six months preceding the last six months.    |
+| diff_last_six_months       | The difference between the last six months and the preceding six months. |
+| last_year                  | Ratio calculated over the last year.                        |
+| pre_last_year              | Ratio from the year preceding the last year.                |
+| diff_last_year             | The difference between the last year and the preceding year. |
+| last_quarter               | Ratio calculated over the last quarter.                     |
+| pre_last_quarter           | Ratio from the quarter preceding the last quarter.          |
+| diff_last_quarter          | The difference between the last quarter and the preceding quarter. |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| ratio_filter | Select business performance ratios  by ratios. Options: `current_ratio`,`gross_profit_ratio`, `debt_ratio`, `net_profit_ratio`,`acid_test_ratio`,`receivable_turnover_ratio`,`debt_to_equity_ratio`,`operating_cost_ratio`|
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

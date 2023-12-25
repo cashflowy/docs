@@ -1,0 +1,68 @@
+---
+title: Fetch Payments Made
+sidebar_position: 2
+---
+
+Payments Made captures details of financial transactions, including date, amount, customer, and payment method.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_payments_made"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=2101113916"
+/>
+
+### Data headers
+
+| Header                    | Description                                 |
+|---------------------------|---------------------------------------------|
+| payment_number            | Payment number                              |
+| bill_numbers              | Bill numbers associated with the payment    |
+| vendor_id                 | Vendor ID                                   |
+| vendor_name               | Vendor name                                 |
+| payment_mode              | Payment mode                                |
+| description               | Description of the payment                  |
+| date                      | Date of the payment                         |
+| reference_number          | Reference number for the payment            |
+| amount                    | Amount of the payment                       |
+| bcy_amount                | Amount in base currency                     |
+| unused_amount             | Unused amount                               |
+| bcy_unused_amount         | Unused amount in base currency              |
+| is_paid_via_print_check   | Indicates if the payment is made via check |
+| paid_through_account_name | Account name through which payment is made  |
+| check_id                  | ID of the check used for payment            |
+| check_number              | Check number                                |
+| check_status              | Status of the check                         |
+| currency_code             | Currency code                               |
+| exchange_rate             | Exchange rate                               |
+| payment_id                | ID of the payment                           |
+| paid_through_account_id   | ID of the account used for payment          |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

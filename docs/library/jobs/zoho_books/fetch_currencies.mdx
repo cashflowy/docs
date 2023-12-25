@@ -1,0 +1,62 @@
+---
+title: Fetch Currencies
+sidebar_position: 2
+---
+
+
+The Zoho Books Currencies provides essential information about currencies within the Zoho Books platform.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_currencies"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=822432482"
+/>
+
+
+### Data headers
+
+| Header                  | Description                                              |
+|-------------------------|----------------------------------------------------------|
+| currency_code           | The code representing the currency.                       |
+| currency_name           | The name of the currency.                                 |
+| currency_name_formatted | Formatted representation of the currency name.            |
+| currency_symbol         | The symbol associated with the currency.                  |
+| price_precision         | Precision of the currency price.                          |
+| currency_format         | The format in which the currency is represented.         |
+| is_base_currency        | Indicates whether the currency is the base currency.     |
+| exchange_rate           | The exchange rate of the currency.                        |
+| effective_date          | The effective date of the currency information.          |
+| currency_id             | Zoho books id for the currency.                      |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

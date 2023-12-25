@@ -1,0 +1,63 @@
+---
+title: Fetch Bill Details
+sidebar_position: 2
+---
+
+This job fetches Bill Details from zoho books. Invoices from vendors are called bills in zoho books.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_bill_details"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=810087260"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|------------------|-------------------------------------------------------|
+| vendor_name      | Name of the vendor associated with the bill           |
+| status           | Status of the bill (e.g., pending, paid)              |
+| date             | Date of the bill                                      |
+| due_date         | Due date for payment of the bill                       |
+| bill_number      | Bill number assigned to the bill                       |
+| reference_number | Reference number associated with the bill              |
+| txn_value_date   | Transaction value date of the bill                    |
+| currency_code    | Currency code used in the bill                         |
+| exchange_rate    | Exchange rate used for currency conversion            |
+| fcy_total        | Total amount in foreign currency                      |
+| bcy_total        | Total amount in base currency                         |
+| fcy_balance      | Balance amount in foreign currency                    |
+| bcy_balance      | Balance amount in base currency                       |
+| project_names    | Names of the projects associated with the bill        |
+| bill_id | Zoho books id for this bill |
+| vendor_id | Zoho books id for the related vendor |
+| currency_id      | Zoho books id for the currency used in the bill   |
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

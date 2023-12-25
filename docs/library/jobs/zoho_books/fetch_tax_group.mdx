@@ -1,0 +1,46 @@
+---
+title: Fetch Tax Group
+sidebar_position: 2
+---
+
+This job fetches tax group from Zoho Books and provides a detailed view on categorization of specific taxes applied collectively to streamline the tax management process.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_tax_group"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1411358440"
+/>
+
+
+### Data headers
+
+| Header               | Description                                           |
+|----------------------|-------------------------------------------------------|
+| tax_name             | Name of the tax associated with the tax group.    |
+| tax_percentage       | Percentage rate of the tax within the tax group.                         |
+| tax_type             | Type of within the tax group                        |
+| tax_specific_type    | Specific type within the tax group (if applicable)                  |
+| start_date           | Start date of the tax within the tax group                               |
+| end_date           | End date of the tax within the tax group                               |
+| tax_id               | Zoho books id for the tax within the tax group                        |
+| tax_authority_id     | Zoho books id for the tax authority associated with the tax within the tax group.       |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
