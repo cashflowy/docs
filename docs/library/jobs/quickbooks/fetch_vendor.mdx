@@ -1,0 +1,58 @@
+# Fetch Vendors - DB Format
+
+The Quickbooks Vendors provides information about vendors or suppliers involved in business transactions. It includes details such as vendor names, contact information, and associated attributes.
+
+<AddJob
+  template="gsheet_quickbooks_get_vendors.js"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=785471636"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----------------------------------|---------------------------------------------------|
+| Balance                          | Current balance associated with the vendor.       |
+| Vendor1099                       | Indicates if the vendor is eligible for 1099 reporting (true/false).|
+| Domain                           | Domain information related to the vendor.         |
+| Sparse                           | Indicates if the vendor is sparse (true/false).   |
+| SyncToken                        | Token for synchronization purposes.                |
+| CompanyName                      | Name of the vendor's company.                      |
+| DisplayName                      | Display name of the vendor.                        |
+| PrintOnCheckName                 | Name used when printing checks for the vendor.    |
+| Active                           | Indicates if the vendor is active (true/false).   |
+| BillAddr_Line1                   | Line 1 of the billing address for the vendor.     |
+| BillAddr_Line2                   | Line 2 of the billing address for the vendor.     |
+| BillAddr_City                    | City of the billing address for the vendor.       |
+| BillAddr_Country                 | Country of the billing address for the vendor.    |
+| BillAddr_CountrySubDivisionCode  | Country subdivision code for the billing address. |
+| BillAddr_PostalCode              | Postal code of the billing address for the vendor.|
+| CurrencyRef_value                | Value of the currency reference.                   |
+| CurrencyRef_name                 | Name of the currency reference.                   |
+| MetaData_CreateTime              | Timestamp indicating the creation time.           |
+| MetaData_LastUpdatedTime         | Timestamp indicating the last update time.       |
+| AlternatePhone_FreeFormNumber    | Alternate phone number of the vendor.             |
+| BillAddr_Id                      | Identifier for the billing address.               |
+| Id                               | Unique identifier for the vendor.                 |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
