@@ -1,0 +1,42 @@
+# Fetch Trial Balance - Simple Format
+
+
+The QuickBooks Trial Balance is a financial report that summarizes the balances of all general ledger accounts at a specific point in time. It ensures the equality of debits and credits, providing a fundamental overview of a company's financial standing.
+
+<AddJob
+  template="gsheet_quickbooks_simple_trial_balance"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=2119128512"
+/>
+
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| Accounts | Name of the related account |
+| Accounts Id | quickbooks id of the related account |
+| Total |  Total account balance for a specific month |
+| Total |  Total account balance for another specific month |
+| ... |  ...  |
+
+
+
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

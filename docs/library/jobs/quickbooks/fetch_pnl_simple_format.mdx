@@ -1,0 +1,43 @@
+# Fetch Profit And Loss - Simple Format
+
+
+The QuickBooks Profit and Loss statement, provides a concise overview of a company's revenue, costs, and expenses over a specific period. It helps assess financial performance, indicating whether a business is profitable or incurring losses.
+
+<AddJob
+  template="scripts/gsheet/quickbooks/business_overview/pnl_simple_style.js"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=2134018633"
+/>
+
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| Accounts | Name of the related account |
+| Accounts Id | quickbooks id of the related account |
+| Total |  Total account balance for a specific month |
+| Total |  Total account balance for another specific month |
+| ... |  ...  |
+
+
+
+
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

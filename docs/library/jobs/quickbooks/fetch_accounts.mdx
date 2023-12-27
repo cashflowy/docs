@@ -1,0 +1,42 @@
+# Fetch Accounts - DB Format
+
+
+The QuickBooks List Accounts Details dataset provides essential information about accounts, including unique identifiers, names, types, currency codes, balances, default status, and creation/modification timestamps.
+
+<AddJob
+  template="gsheet_quickbooks_db_get_accounts_list"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=2061853272"
+/>
+
+
+
+### Data headers
+
+| Headers                      | Description                                                        |
+|------------------------------|--------------------------------------------------------------------|
+| Account       | General category of the account (example: Asset, Liability). |
+| Type          | Type of the account (example: Bank, Expense).   |
+| Detail Type   | Specific subtype or detail type of the account. |
+| Description   | Brief description of the account.               |
+| Balance   | Brief balance of the account.               |
+
+
+
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
