@@ -1,0 +1,50 @@
+# Fetch Tax Rate - DB Format
+
+The Quickbooks Tax Rate provides information about tax rates applied to financial transactions. 
+
+<AddJob
+  template="gsheet_quickbooks_get_tax_rate.js"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=2120814626"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|-----------------------------|---------------------------------------------------|
+| Name                        | Name of the tax rate.                             |
+| Description                 | Description or additional details about the tax rate.|
+| Active                      | Indicates if the tax rate is active (true/false).|
+| RateValue                   | Percentage value of the tax rate.                 |
+| SpecialTaxType              | Special type of tax, if applicable.               |
+| DisplayType                 | Type of display for the tax rate.                 |
+| Domain                      | Domain information related to the tax rate.       |
+| Sparse                      | Indicates if the tax rate is sparse (true/false).|
+| SyncToken                   | Token for synchronization purposes.                |
+| AgencyRef_value             | Value of the agency reference associated with the tax rate.|
+| MetaData_CreateTime         | Timestamp indicating the creation time.           |
+| MetaData_LastUpdatedTime    | Timestamp indicating the last update time.        |
+| Id                          | Unique identifier for the tax rate.              |
+
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

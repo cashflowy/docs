@@ -1,0 +1,45 @@
+# Fetch Tax Agency - DB Format
+
+The Quickbooks Tax Agency provides information about tax agencies involved in financial transactions.
+
+<AddJob
+  template="gsheet_quickbooks_get_tax_agency.js"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=1282251901"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|-----------------------------|---------------------------------------------------|
+| DisplayName                 | Display name of the tax agency.                    |
+| TaxTrackedOnPurchases       | Indicates if tax is tracked on purchases (true/false).|
+| TaxTrackedOnSales           | Indicates if tax is tracked on sales (true/false).    |
+| Domain                      | Domain information related to the tax agency.     |
+| Sparse                      | Indicates if the tax agency is sparse (true/false).|
+| SyncToken                   | Token for synchronization purposes.                |
+| MetaData_CreateTime         | Timestamp indicating the creation time.           |
+| MetaData_LastUpdatedTime    | Timestamp indicating the last update time.        |
+| Id                          | Unique identifier for the tax agency.              |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

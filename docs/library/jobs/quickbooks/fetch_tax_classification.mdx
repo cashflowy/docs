@@ -1,0 +1,45 @@
+# Fetch Tax Classification - DB Format
+
+The Quickbooks Tax Classification provides information about tax classifications used in financial transactions. It includes details such as tax classification names, domain, and associated information.
+
+<AddJob
+  template="gsheet_quickbooks_get_tax_classification.js"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=17575659"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|---------------------|---------------------------------------------------|
+| Name                | Name of the tax classification.                   |
+| Description         | Description or additional details about the tax classification.|
+| ApplicableTo        | Applicable entities or transactions for the tax classification.|
+| Code                | Code associated with the tax classification.    |
+| Level               | Level or depth of the tax classification in the hierarchy.|
+| ParentRef_value     | Value of the parent reference (if applicable).   |
+| ParentRef_name      | Name of the parent reference (if applicable).    |
+| Id                  | Unique identifier for the tax classification.    |
+
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
