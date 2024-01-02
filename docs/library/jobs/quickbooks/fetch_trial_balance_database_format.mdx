@@ -1,0 +1,42 @@
+# Fetch Trial Balance - DB Format
+
+
+The QuickBooks The Transaction List by Vendors dataset provides a comprehensive list of transactions organized by vendors.
+
+<AddJob
+  template="gsheet_quickbooks_db_trial_balance"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=1891092690"
+/>
+
+
+
+### Data headers
+
+| Headers                      | Description                        |
+|----------------|--------------------------------------------------|
+| Account Name   | Name of the account.                             |
+| Account ID     | Unique identifier for the account.               |
+| Month          | Specific month for the trial balance details.    |
+| Transaction Type| Type of the transaction (e.g., Debit, Credit).  |
+| Value          | Transaction value associated with the account.   |
+
+
+
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

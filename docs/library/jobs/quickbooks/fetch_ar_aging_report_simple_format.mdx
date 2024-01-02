@@ -1,0 +1,40 @@
+# Fetch AR Aging Report - Simple Format
+
+The Quickbooks The AR (Accounts Receivable) Aging Report provides a snapshot of unpaid customer invoices, categorizing them based on the duration of outstanding balances. It aids in tracking and managing receivables for effective cash flow management.
+
+<AddJob
+  template="gsheet_quickbooks_simple_ar_aging_report"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=1804403317"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| Accounts | Name of the related account |
+| Accounts Id | quickbooks id of the related account |
+| Current |  Current account balance of the related account |
+| Total |  Total account balance for a specific month |
+| Total |  Total account balance for another specific month |
+| ... |  ...  |
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
