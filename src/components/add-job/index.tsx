@@ -3,7 +3,7 @@ import { AddJobProps } from "./types";
 
 export default function AddJob({ template }: AddJobProps) {
 
-  var url = `https://prod.cashflowy.io/job/${template}/create`;
+  var url = `https://console.cashflowy.io/job/${template}/create`;
   
   return (
     <>
