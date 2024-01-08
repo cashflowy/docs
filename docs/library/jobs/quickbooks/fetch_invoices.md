@@ -1,5 +1,5 @@
 ---
-title: Fetch Invoices
+title:  Invoices
 sidebar_position: 1
 ---
 
