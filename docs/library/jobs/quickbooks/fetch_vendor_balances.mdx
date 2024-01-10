@@ -1,0 +1,54 @@
+---
+title: Fetch Vendor Balances
+sidebar_position: 2
+---
+
+
+
+Vendor Balances offers a quick snapshot of outstanding balances and transaction details with vendors in  QuickBooks. Easily manage payments and optimize financial decisions based on up-to-date vendor information.
+
+<AddJob
+  template="gsheet_quickbooks_db_get_vendor_balances"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=706032506"
+/>
+
+
+### Data headers
+
+| Header          | Description                                           |
+|-----------------|-------------------------------------------------------|
+| vendor     | Name of the vendor                                    |
+| total     |   total amount                   |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|                                                                                   
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

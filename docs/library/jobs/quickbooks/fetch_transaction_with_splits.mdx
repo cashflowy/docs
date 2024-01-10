@@ -1,0 +1,58 @@
+# Fetch Transaction With Splits
+
+
+The QuickBooks Transaction With Splits dataset helps to allocate money to different categories or accounts within a single entry. It makes tracking and managing finances more detailed and accurate.
+
+<AddJob
+  template="gsheet_quickbooks_simple_get_transaction_with_splits"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=1076574164"
+/>
+
+
+
+### Data headers
+
+| Headers                      | Description                                                        |
+|------------------------------|--------------------------------------------------------------------|
+| Date                | Date of the transaction.                         |
+| Transaction Type    | Type of the transaction (e.g., Invoice, Payment).|
+| Num                 | Transaction number or identifier.               |
+| Posting             | Posting details related to the transaction.     |
+| Name                 | Name associated with the transaction.               |
+| Memo/Description   | Additional memo or description for the transaction. |
+| Account             | Account associated with the transaction.        |
+| Amount              | Amount of the transaction.                       |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|                                                                                   
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+
+
+
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

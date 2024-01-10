@@ -1,0 +1,66 @@
+---
+title: Fetch Bills
+sidebar_position: 2
+---
+
+This job fetches Bills from quickbooks.
+
+<AddJob
+  template="gsheet_quickbooks_db_get_bills"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=1967143798"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|----|----|
+| DueDate                                              | Due date of the invoice.                               |
+| Balance                                              | Remaining balance of the invoice.                      |
+| TotalAmt                                             | Total amount of the invoice.                           |
+| Domain                                               | Domain information related to the invoice.            |
+| Sparse                                               | Indicates if the invoice data is sparse (true/false). |
+| Id                                                   | Unique identifier for the invoice.                    |
+| SyncToken                                            | Token for synchronization purposes.                   |
+| DocNumber                                            | Document number associated with the invoice.          |
+| TxnDate                                              | Transaction date of the invoice.                      |
+| CurrencyRef_value                                    | Value of the currency reference associated with the invoice. |
+| CurrencyRef_name                                     | Name of the currency reference associated with the invoice.  |
+| SalesTermRef_value                                   | Value of the sales term reference associated with the invoice.  |
+| VendorRef_value                                      | Value of the vendor reference associated with the invoice.     |
+| VendorRef_name                                       | Name of the vendor reference associated with the invoice.      |
+| APAccountRef_value                                   | Value of the accounts payable account reference associated with the invoice. |
+| APAccountRef_name                                    | Name of the accounts payable account reference associated with the invoice.  |
+| MetaData_CreateTime                                  | Timestamp indicating the creation time of the invoice. |
+| MetaData_LastUpdatedTime                             | Timestamp indicating the last update time of the invoice. |
+| LinkedTxn_TxnId                                     | Transaction ID of linked transactions, if any.       |
+| LinkedTxn_TxnType                                   | Transaction type of linked transactions, if any.     |
+| Line_Id                                              | Unique identifier for the invoice line.               |
+| Line_LineNum                                         | Line number associated with the invoice line.         |
+| Line_Description                                     | Description of the invoice line.                      |
+| Line_Amount                                          | Amount associated with the invoice line.              |
+| Line_DetailType                                      | Detail type of the invoice line.                      |
+| Line_AccountBasedExpenseLineDetail_AccountRef_value  | Value of the account reference associated with the invoice line. |
+| Line_AccountBasedExpenseLineDetail_AccountRef_name   | Name of the account reference associated with the invoice line.  |
+| Line_AccountBasedExpenseLineDetail_BillableStatus    | Billable status of the invoice line.                  |
+| Line_AccountBasedExpenseLineDetail_TaxCodeRef_value  | Value of the tax code reference associated with the invoice line. |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

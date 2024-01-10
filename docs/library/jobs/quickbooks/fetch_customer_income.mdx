@@ -1,0 +1,54 @@
+---
+title: Fetch Customer Income
+sidebar_position: 2
+---
+
+
+Quickbooks Customer Income Details provides information about income associated with customers in financial transactions. It includes details such as customer names, expenses, amounts etc. 
+
+<AddJob
+  template="gsheet_zoho_books_db_get_customer_balances"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=583684461"
+/>
+
+
+### Data headers
+
+| Header             | Description                              |
+|-----------|---------------------------------------------------|
+| Customer  | Name or identifier of the customer.               |
+| Income    | Total income associated with the customer.        |
+| Expenses  | Total expenses associated with the customer.      |
+| Net Income| Net income calculated as (Income - Expenses).      |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
