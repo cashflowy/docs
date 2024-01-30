@@ -1,0 +1,44 @@
+---
+title:  Report Types
+sidebar_position: 2
+---
+
+This job fetches Report Types from Stripe. 
+
+<AddJob
+  template="gsheet_stripe_simple_get_report_types" 
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=167219103"
+/>
+
+
+### Data headers 
+
+| Header                   | Description                                                         |
+|--------------------------|---------------------------------------------------------------------|
+| id                       | Unique identifier for the object.                                   |
+| object                   | Type of object (e.g., data).                                        |
+| data_available_end       | End date for data availability.                                     |
+| data_available_start     | Start date for data availability.                                   |
+| default_columns/0 to 23  | Default columns for data (assuming an array-like structure).        |
+| livemode                 | Indicates whether the object is in live mode.                       |
+| name                     | Name or title associated with the object.                           |
+| updated                  | Date and time of the last update.                                   |
+| version                  | Version information for the object.                                 |
+
+
+
+
+### Filtration options 
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+

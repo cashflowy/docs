@@ -1,7 +1,7 @@
 # Dependencies
 node_modules
 package-lock.json
-
+temp
 # Production
 build
 dist
@@ -35,3 +35,8 @@ cypress/videos
 themes
 .eslintcache
 db.json
+
+
+.nvmrc
+Helper
+CreateConfig

@@ -1,0 +1,73 @@
+---
+title:  Payment Intents
+sidebar_position: 2
+---
+
+This job fetches Payment Intents from Stripe. 
+
+<AddJob
+  template="gsheet_stripe_simple_get_payment_intents" 
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=899379188"
+/>
+
+
+### Data Headers
+| Header                                                    | Description                                                           |
+|-----------------------------------------------------------|----------------------------------------------|
+| id                                                        | Unique identifier for the payment.                                   |
+| object                                                    | Type of object (e.g., payment).                                      |
+| amount                                                    | Total amount for the payment.                                        |
+| amount_capturable                                         | Amount that can be captured for the payment.                         |
+| amount_received                                           | Amount received for the payment.                                     |
+| application                                               | Application ID associated with the payment.                         |
+| application_fee_amount                                    | Application fee amount (if any).                                    |
+| automatic_payment_methods                                 | Automatic payment methods for the payment.                           |
+| canceled_at                                               | Date and time when the payment was canceled.                        |
+| cancellation_reason                                       | Reason for canceling the payment.                                    |
+| capture_method                                            | Method used to capture the payment (e.g., automatic).               |
+| client_secret                                             | Client secret for the payment.                                       |
+| confirmation_method                                       | Confirmation method for the payment.                                |
+| created                                                   | Date and time when the payment was created.                         |
+| currency                                                  | Currency in which the amount is specified.                          |
+| customer                                                  | Customer associated with the payment.                                |
+| description                                               | Brief description of the payment.                                    |
+| invoice                                                   | Invoice ID associated with the payment.                             |
+| last_payment_error                                        | Details of the last payment error, if any.                          |
+| latest_charge                                             | Latest charge ID associated with the payment.                       |
+| livemode                                                  | Indicates whether the payment is in live mode.                      |
+| next_action                                               | Next action to be taken for the payment.                            |
+| on_behalf_of                                              | Account (on behalf of) associated with the payment.                 |
+| payment_method                                            | Payment method ID used for the payment.                             |
+| payment_method_configuration_details                      | Configuration details for the payment method.                       |
+| payment_method_options/card                               | Installment options for credit card payments.                    |
+| payment_method_options/us_bank_account/verification_method| Verification method for US bank account payments.                 |
+| payment_method_types/0-3                                  | Type of payment methods associated with the payment.    |
+| processing                                                | Details about the processing status of the payment.               |
+| receipt_email                                             | Email address for sending a receipt.                               |
+| review                                                    | Details about the review status of the payment.                   |
+| setup_future_usage                                        | Indicates the intended usage of the payment for future setup.     |
+| shipping                                                  | Shipping information associated with the payment.                |
+| source                                                    | Source of the payment (e.g., card, bank account).                 |
+| statement_descriptor                                      | Descriptor that appears on the customer's statement.              |
+| statement_descriptor_suffix                               | Additional descriptor suffix for the statement.                  |
+| status                                                    | Status of the payment (e.g., succeeded, failed).                    |
+| transfer_data                                             | Transfer data associated with the payment.                          |
+| transfer_group                                            | Transfer group for grouping multiple payments.                      |
+
+
+
+
+### Filtration options 
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+

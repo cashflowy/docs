@@ -1,0 +1,62 @@
+---
+title:  Invoice Items
+sidebar_position: 2
+---
+
+This job fetches Invoice Items from Stripe. 
+
+<AddJob
+  template="gsheet_stripe_simple_get_invoice_items" 
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=1846151702"
+/>
+
+
+### Data headers 
+
+| Header                  | Description                                               |
+|-------------------------|-----------------------------------------------------------|
+| id                      | Unique identifier for the item.                            |
+| object                  | Type of object (e.g., invoice item, subscription).        |
+| amount                  | Total amount for the item.                                |
+| currency                | Currency in which the amount is specified.                |
+| customer                | Customer associated with the item.                        |
+| date                    | Date when the item was created.                           |
+| description             | Brief description of the item.                            |
+| discountable            | Indicates whether the item is eligible for discounts.     |
+| discounts               | Discounts applied to the item.                            |
+| invoice                 | Invoice associated with the item.                         |
+| livemode                | Indicates whether the item is in live mode.               |
+| period/end              | End date of the billing period.                           |
+| period/start            | Start date of the billing period.                         |
+| plan                    | Subscription plan associated with the item.               |
+| price/id                | ID of the price associated with the item.                 |
+| price/object            | Type of object for the price.                             |
+| price/active            | Indicates whether the price is currently active.          |
+| ... (continue for other price-related fields)               |
+| proration               | Indicates whether proration is applied.                   |
+| quantity                | Quantity of the item.                                     |
+| subscription            | Subscription associated with the item.                   |
+| tax_rates               | Tax rates applied to the item.                           |
+| test_clock              | Test clock value.                                         |
+| unit_amount             | Unit amount for the item.                                 |
+| unit_amount_decimal     | Decimal representation of the unit amount.                |
+
+
+
+
+### Filtration options 
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| customer      | Customer ID to filter invoice items for a specific customer.|
+| limit         | Limits the number of invoice items to retrieve.       |
+| pending       | Filters invoice items based on their pending status.  |

@@ -1,0 +1,57 @@
+---
+title:  Products
+sidebar_position: 2
+---
+
+This job fetches Products from Stripe. 
+
+<AddJob
+  template="gsheet_stripe_simple_get_products" 
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=899379188"
+/>
+
+
+### Data headers 
+
+| Header               | Description                                  |
+|----------------------|----------------------------------------------|
+| id                   | Unique identifier for the object.             |
+| object               | Type of object (e.g., product, subscription).|
+| active               | Indicates whether the item is currently active.|
+| attributes           | Additional attributes or details.            |
+| created              | Date and time when the item was created.     |
+| default_price        | Default price associated with the item.      |
+| description          | Brief description of the item.               |
+| features             | Special features or characteristics.         |
+| images               | URLs of images associated with the item.     |
+| livemode             | Indicates whether the item is in live mode.  |
+| name                 | Name or title of the item.                   |
+| package_dimensions   | Dimensions of the item's package.            |
+| shippable            | Indicates whether the item is shippable.     |
+| statement_descriptor | Descriptor for statements or invoices.       |
+| tax_code             | Tax code associated with the item.          |
+| type                 | Type of the item (e.g., physical, digital). |
+| unit_label           | Label for the unit of measurement.           |
+| updated              | Date and time of the last update.           |
+| url                  | URL or link related to the item.             |
+
+
+
+
+### Filtration options 
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| limit             | Limits the number of products to retrieve.    |
+| active            | Filters products based on their active status.|
+| start_date        |  Select sales transactions with billing date on or after start_date. Format - YYYY-MM-DD.|
+| end_date          | Select sales transactions with billing date on or before end_date. Format - YYYY-MM-DD|

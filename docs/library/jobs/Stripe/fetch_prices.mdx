@@ -1,0 +1,61 @@
+---
+title:  Prices
+sidebar_position: 2
+---
+
+This job fetches Prices from Stripe. 
+
+<AddJob
+  template="gsheet_stripe_simple_get_prices" 
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=1609640077"
+/>
+
+
+### Data headers 
+
+| Header                          | Description                                                   |
+|---------------------------------|---------------------------------------------------------------|
+| id                              | Unique identifier for the product.                             |
+| object                          | Type of object (e.g., product).                                |
+| active                          | Indicates whether the product is currently active.            |
+| billing_scheme                  | Specifies how prices are billed for the product.               |
+| created                         | Date and time when the product was created.                   |
+| currency                        | Currency in which the prices are specified.                   |
+| custom_unit_amount              | Custom unit amount for the product.                            |
+| livemode                        | Indicates whether the product is in live mode.                |
+| lookup_key                      | Lookup key associated with the product.                        |
+| nickname                        | A nickname or short name for the product.                     |
+| product                         | The type or category of the product.                           |
+| recurring/aggregate_usage       | Specifies how usage is aggregated for the product.             |
+| recurring/interval              | Interval at which the product is billed.                       |
+| recurring/interval_count        | Number of intervals between each billing.                     |
+| recurring/trial_period_days      | Number of days for a trial period.                            |
+| recurring/usage_type             | Specifies whether the product's usage is metered or licensed.|
+| tax_behavior                    | Specifies the tax behavior for the product.                    |
+| tiers_mode                      | Specifies how tiers are defined for the product.               |
+| transform_quantity              | Indicates whether to transform quantity on the invoice.        |
+| type                            | Type of the product (e.g., service).                           |
+| unit_amount                     | Unit amount for the product.                                   |
+| unit_amount_decimal             | Decimal representation of the unit amount for the product.    |
+
+
+
+### Filtration options 
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date  | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date    | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| active      | Only return prices that are active or inactive (e.g., pass false to list all inactive prices).                        |
+| currency    | Only return prices for the given currency (e.g., usd, inr,...).                                                         |
+| type        | Only return prices of type recurring or one_time.                                                                     |
+| limit       | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.            |

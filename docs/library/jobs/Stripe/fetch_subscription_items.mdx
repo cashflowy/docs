@@ -1,0 +1,71 @@
+---
+title:  Subscription Items
+sidebar_position: 2
+---
+
+This job fetches Subscription Items from Stripe. 
+
+<AddJob
+  template="gsheet_stripe_simple_get_subscription_items" 
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=697519731"
+/>
+
+
+### Data headers 
+
+| Header                                       | Description                                                                        |
+|----------------------------------------------|------------------------------------------------------------------------------------|
+| id                                           | Unique identifier for the subscription.                                            |
+| object                                       | Type of object (e.g., subscription).                                               |
+| application                                  | Associated application for the subscription.                                       |
+| application_fee_percent                      | Application fee percent for the subscription.                                      |
+| automatic_tax/enabled                        | Indicates whether automatic tax is enabled for the subscription.                    |
+| automatic_tax/liability/type                 | Type of liability for automatic tax.                                                |
+| billing_cycle_anchor                         | Date and time of the billing cycle anchor.                                         |
+| billing_cycle_anchor_config                  | Configuration for the billing cycle anchor.                                        |
+| billing_thresholds                           | Billing thresholds for the subscription.                                           |
+| cancel_at                                    | Date when the subscription will be canceled.                                       |
+| cancel_at_period_end                         | Indicates whether the subscription will be canceled at the end of the period.       |
+| canceled_at                                  | Date and time when the subscription was canceled.                                  |
+| cancellation_details/comment                 | Comment associated with the cancellation.                                          |
+| cancellation_details/feedback                | Feedback regarding the cancellation.                                               |
+| cancellation_details/reason                  | Reason for the cancellation.                                                       |
+| collection_method                            | Collection method for the subscription.                                            |
+| created                                      | Date and time when the subscription was created.                                   |
+| currency                                     | Currency used for billing.                                                         |
+| current_period_end                           | End date of the current billing period.                                            |
+| current_period_start                         | Start date of the current billing period.                                          |
+| customer                                     | Customer associated with the subscription.                                         |
+| days_until_due                               | Number of days until payment is due.                                               |
+| default_payment_method                       | Default payment method for the subscription.                                       |
+| default_source                               | Default source for the subscription.                                               |
+| default_tax_rates                            | Default tax rates for the subscription.                                            |
+| description                                  | Description or name associated with the subscription.                              |
+| discount                                     | Discount associated with the subscription.                                         |
+| ended_at                                     | Date and time when the subscription ended.                                         |
+| transfer_data                                | Transfer data for the subscription.                                                |
+| trial_end                                    | End date of the trial period.                                                      |
+| trial_settings/end_behavior/missing_payment_method | End behavior for the trial period when payment method is missing.               |
+| trial_start                                  | Start date of the trial period.                                                    |
+
+
+
+
+### Filtration options 
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----------|------------------------------------------------------------------------------------------------------------------|
+| limit    | A limit on the number of objects to be returned. Limit can range between 1 and 100.Default is 10.       |
+| customer | Customer identifier for filtering subscriptions.                                                                 |
+| price    | Price identifier for filtering subscriptions.                                                                    |
+| status   | The status of the subscriptions to retrieve.                                                                    |
+
