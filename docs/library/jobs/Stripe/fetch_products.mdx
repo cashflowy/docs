@@ -3,10 +3,10 @@ title:  Products
 sidebar_position: 2
 ---
 
-This job fetches vendors from Simplepor. v3 
+This job fetches Products from Stripe. 
 
 <AddJob
-  template="gsheet_simplepor_db_vendors" v4
+  template="gsheet_stripe_simple_get_products" 
 />
 
 ## Data
@@ -14,49 +14,44 @@ This job fetches vendors from Simplepor. v3
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=548360923"
-/>v6
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=899379188"
+/>
 
 
-### Data headers v7
+### Data headers 
 
-| Header           | Description                                              |
-|------------------|----------------------------------------------------------|
-| content          | Content of the event notification                        |
-| type             | Type of the event notification                           |
-| doer             | Doer or actor associated with the event                  |
-| object_type      | Type of the object affected by the event                  |
-| object_id        | Identifier of the object affected by the event            |
-| user             | Name of the user associated with the event                |
-| user_email       | Email address of the user associated with the event      |
-| details_from     | Details indicating the source in the event                |
-| details_to       | Details indicating the destination in the event           |
-| details_action   | Details about the action performed in the event           |
-| details_por_no   | Details related to the purchase order number, if available|
-| createdAt        | Timestamp when the event was created                     |
-| updatedAt        | Timestamp when the event was last updated                |
-| id               | Unique identifier for the event                          |
-| user_id          | Unique identifier for the user associated with the event  |
+| Header               | Description                                  |
+|----------------------|----------------------------------------------|
+| id                   | Unique identifier for the object.             |
+| object               | Type of object (e.g., product, subscription).|
+| active               | Indicates whether the item is currently active.|
+| attributes           | Additional attributes or details.            |
+| created              | Date and time when the item was created.     |
+| default_price        | Default price associated with the item.      |
+| description          | Brief description of the item.               |
+| features             | Special features or characteristics.         |
+| images               | URLs of images associated with the item.     |
+| livemode             | Indicates whether the item is in live mode.  |
+| name                 | Name or title of the item.                   |
+| package_dimensions   | Dimensions of the item's package.            |
+| shippable            | Indicates whether the item is shippable.     |
+| statement_descriptor | Descriptor for statements or invoices.       |
+| tax_code             | Tax code associated with the item.          |
+| type                 | Type of the item (e.g., physical, digital). |
+| unit_label           | Label for the unit of measurement.           |
+| updated              | Date and time of the last update.           |
+| url                  | URL or link related to the item.             |
 
 
 
-### Filtration options v7
+
+### Filtration options 
 
 This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
 
 | Parameter | Options |
 |----|----|
-| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
-| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
-
-<!---
-## Others
-
-### Similar jobs
-
-Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
-
-### Reports that use this job
-
-Here are some of the report templates that use this job: 
--->
+| limit             | Limits the number of products to retrieve.    |
+| active            | Filters products based on their active status.|
+| start_date        |  Select sales transactions with billing date on or after start_date. Format - YYYY-MM-DD.|
+| end_date          | Select sales transactions with billing date on or before end_date. Format - YYYY-MM-DD|

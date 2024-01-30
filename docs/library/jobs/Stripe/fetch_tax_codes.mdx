@@ -3,10 +3,10 @@ title:  Tax Codes
 sidebar_position: 2
 ---
 
-This job fetches vendors from Simplepor. v3 
+This job fetches Tax Codes from Stripe. 
 
 <AddJob
-  template="gsheet_simplepor_db_vendors" v4
+  template="gsheet_stripe_simple_get_tax_codes" 
 />
 
 ## Data
@@ -14,49 +14,25 @@ This job fetches vendors from Simplepor. v3
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/14xpjjn0KR9oWi4zoM7JEfvAuiwR5ybX_0dVTZxmmwRI/edit#gid=548360923"
-/>v6
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=951213340"
+/>
 
 
-### Data headers v7
+### Data headers 
 
-| Header           | Description                                              |
-|------------------|----------------------------------------------------------|
-| content          | Content of the event notification                        |
-| type             | Type of the event notification                           |
-| doer             | Doer or actor associated with the event                  |
-| object_type      | Type of the object affected by the event                  |
-| object_id        | Identifier of the object affected by the event            |
-| user             | Name of the user associated with the event                |
-| user_email       | Email address of the user associated with the event      |
-| details_from     | Details indicating the source in the event                |
-| details_to       | Details indicating the destination in the event           |
-| details_action   | Details about the action performed in the event           |
-| details_por_no   | Details related to the purchase order number, if available|
-| createdAt        | Timestamp when the event was created                     |
-| updatedAt        | Timestamp when the event was last updated                |
-| id               | Unique identifier for the event                          |
-| user_id          | Unique identifier for the user associated with the event  |
+| Header       | Description                |
+|--------------|----------------------------|
+| id           | Unique identifier.         |
+| object       | Type of object.            |
+| description  | Description of the item.   |
+| name         | Name of the item.          |
 
 
 
-### Filtration options v7
+
+### Filtration options 
 
 This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
 
 | Parameter | Options |
-|----|----|
-| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
-| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
 
-<!---
-## Others
-
-### Similar jobs
-
-Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
-
-### Reports that use this job
-
-Here are some of the report templates that use this job: 
--->
