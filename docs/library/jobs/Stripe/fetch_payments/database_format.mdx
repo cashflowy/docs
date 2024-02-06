@@ -1,0 +1,37 @@
+---
+title:  Payments Database format
+sidebar_position: 2
+sidebar_label: Database format
+---
+
+This job fetches Payments from Stripe - DB format. 
+
+<AddJob
+  template="gsheet_stripe_db_get_payments" 
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet 
+src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=1433025916"/>
+
+
+### Data headers 
+
+| Header           | Description                                              |
+|------------------|----------------------------------------------------------|
+
+
+
+
+### Filtration options 
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
