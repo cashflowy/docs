@@ -1,0 +1,71 @@
+---
+title: Fetch Inventory Valuation Summary
+sidebar_position: 2
+---
+
+Quickbooks Inventory Valuation Summary Details dataset provides information about the summary of inventory valuation. It includes details such as valuation date, quantity, and value of inventory items.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_customers"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=1505396017"
+/>
+
+### Data headers
+
+| Header | Description |
+|-----------------------------------------|-------------------------------------------------------|
+| TotalAmt                                | Total amount of the sales associated with the customer.|
+| Domain                                  | Domain information related to the sales.              |
+| Sparse                                  | Indicates if the sales data is sparse (true/false).   |
+| Id                                      | Unique identifier for the sales transaction.          |
+| SyncToken                               | Token for synchronization purposes.                   |
+| TxnDate                                 | Transaction date of the sales.                        |
+| PrivateNote                             | Private notes associated with the sales.              |
+| Line_Id                                 | Unique identifier for the sales line.                 |
+| Line_LineNum                            | Line number associated with the sales line.           |
+| Line_Description                        | Description of the sales line.                        |
+| Line_Amount                             | Amount associated with the sales line.                |
+| Line_DetailType                         | Detail type of the sales line.                        |
+| Line_DepositLineDetail_Entity_value     | Entity value associated with the deposit line detail.|
+| Line_DepositLineDetail_Entity_name      | Entity name associated with the deposit line detail. |
+| Line_DepositLineDetail_Entity_type      | Entity type associated with the deposit line detail. |
+| Line_DepositLineDetail_AccountRef_value | Account reference value associated with the deposit line detail. |
+| Line_DepositLineDetail_AccountRef_name  | Account reference name associated with the deposit line detail.  |
+| Line_DepositToAccountRef_value          | Account reference value associated with the deposit. |
+| Line_DepositToAccountRef_name           | Account reference name associated with the deposit.  |
+| CurrencyRef_value                       | Value of the currency reference associated with the sales.  |
+| CurrencyRef_name                        | Name of the currency reference associated with the sales.   |
+| MetaData_CreateTime                     | Timestamp indicating the creation time.               |
+| MetaData_LastUpdatedTime                | Timestamp indicating the last update time.            |
+
+
+<!---
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| contact_id | Select bills related to a particular contact (either customer or vendor). Contact id is the id of the customer or vendor from zoho books.  |
+-->
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

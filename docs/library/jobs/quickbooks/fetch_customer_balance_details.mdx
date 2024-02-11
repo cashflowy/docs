@@ -1,0 +1,47 @@
+---
+title: Fetch Customer Balance Details
+sidebar_position: 2
+---
+
+
+Quickbooks Customer Balance Details provides information about the balances associated with customers in financial transactions. It includes details such as customer names, invoiced amounts, amounts received, closing balances etc.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_customer_balances"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=1290363235"
+/>
+
+
+### Data headers
+
+| Header             | Description                                             |
+|------------------|---------------------------------------------------|
+| Date             | Date of the financial transaction.                 |
+| Transaction Type | Type or category of the financial transaction.     |
+| Num              | Transaction number or identifier.                 |
+| Due Date         | Date by which the payment is due.                 |
+| Amount           | Total amount of the financial transaction.        |
+| Open Balance     | Remaining balance to be paid by the customer.     |
+| Balance          | Overall balance of the customer account.           |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

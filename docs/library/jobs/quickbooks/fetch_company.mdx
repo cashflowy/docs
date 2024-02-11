@@ -1,0 +1,69 @@
+---
+title: Fetch Company
+sidebar_position: 2
+---
+
+This job fetches Companies from quickbooks.
+
+<AddJob
+  template="gsheet_quickbooks_db_get_company"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=2039482995"
+/>
+
+
+### Data headers
+
+| Header | Description |
+|-----------------------------|--------------------------------------------------------------------|
+| CompanyName                 | Name of the company.                                           |
+| LegalName                   | Legal name of the company.                                     |
+| CompanyAddr_Id              | Identifier for the company's address.                          |
+| CompanyAddr_Line1           | Street address of the company.                                 |
+| CompanyAddr_City            | City where the company is located.                             |
+| CompanyAddr_Country         | Country where the company is located.                          |
+| CompanyAddr_CountrySubDivisionCode | Code for the country subdivision (state, province) of the company. |
+| CompanyAddr_PostalCode      | Postal code of the company's address.                          |
+| CustomerCommunicationAddr_Id | Identifier for the customer communication address.            |
+| CustomerCommunicationAddr_Line1 | Street address for customer communication.                   |
+| CustomerCommunicationAddr_City | City for customer communication.                               |
+| CustomerCommunicationAddr_Country | Country for customer communication.                            |
+| CustomerCommunicationAddr_CountrySubDivisionCode | Code for the country subdivision (state, province) for customer communication. |
+| CustomerCommunicationAddr_PostalCode | Postal code for customer communication.                      |
+| LegalAddr_Id                | Identifier for the legal address of the company.               |
+| LegalAddr_Line1             | Street address of the legal address.                           |
+| LegalAddr_City              | City of the legal address.                                     |
+| LegalAddr_Country           | Country of the legal address.                                  |
+| LegalAddr_CountrySubDivisionCode | Code for the country subdivision (state, province) of the legal address. |
+| LegalAddr_PostalCode        | Postal code of the legal address.                              |
+| PrimaryPhone_FreeFormNumber | Primary contact phone number for the company.                 |
+| CompanyStartDate            | Start date of the company.                                     |
+| Country                     | Country where the company operates.                            |
+| Email_Address               | Email address for communication.                               |
+| SupportedLanguages          | Languages supported by the company.                           |
+| domain                      | Domain information.                                            |
+| sparse                      | Indicates if the response is sparse.                          |
+| SyncToken                   | Token for synchronization.                                     |
+| MetaData_CreateTime         | Timestamp of creation.                                         |
+| MetaData_LastUpdatedTime    | Timestamp of the last update.                                  |
+| Id                          | Quickbook for the company.                                    |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

@@ -1,0 +1,56 @@
+---
+title: Fetch Vendor Expenses
+sidebar_position: 2
+---
+
+
+
+Vendor Expenses offers a quick snapshot of outstanding expenses and transaction details with vendors in  QuickBooks. Easily manage payments and optimize financial decisions based on up-to-date vendor information.
+
+<AddJob
+  template="gsheet_quickbooks_db_get_vendor_expenses"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=702360371"
+/>
+
+
+### Data headers
+
+| Header          | Description                                           |
+|-----------------|-------------------------------------------------------|
+| vendor     | Name of the vendor                                    |
+| Total |  Total account balance for a specific month |
+| Total |  Total account balance for another specific month |
+| ... |  ...  |
+
+
+
+### Filteration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|                                                                                   
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->

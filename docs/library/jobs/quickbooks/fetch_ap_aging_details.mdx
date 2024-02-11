@@ -1,0 +1,52 @@
+---
+title: Fetch AP Aging Details
+sidebar_position: 2
+---
+
+
+
+Quickbooks AP Aging feature provides a concise overview of outstanding vendor bills, organized by aging periods. Quickly track overdue payments and assess your financial position with this tool.
+
+<AddJob
+  template="gsheet_zoho_books_db_get_ap_aging_details"
+/>
+
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=668143811"
+/>
+
+
+### Data headers
+
+| Header             | Description                                           |
+|--------------------|-------------------------------------------------------|
+| Date         | Date of the financial transaction.                 |
+| Transaction Type | Type or category of the financial transaction. |
+| Num          | Transaction number or identifier.                 |
+| Vendor       | Name or identifier of the vendor associated with the transaction.|
+| Due Date     | Date by which the payment is due.                 |
+| Past Due     | Indicates if the payment is past due.             |
+| Amount       | Total amount of the financial transaction.        |
+| Open Balance | Remaining balance to be paid for the transaction. |
+
+
+
+
+
+
+<!---
+## Others
+
+### Similar jobs
+
+Similar sort of data can be achieved by using get accounting transaction job and filtering it by invoice type. 
+
+### Reports that use this job
+
+Here are some of the report templates that use this job: 
+-->
