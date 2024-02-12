@@ -1,14 +1,23 @@
 ---
-title:  Balance Sheet Simple Format
+title:  Balance Sheet Report
 sidebar_position: 1
-sidebar_label: Simple Format
----
-
-The Zoho Books balance sheet presents a real-time summary of your company's financial standing, showcasing assets, liabilities, and equity at a specific point in time. It offers an instant snapshot of your financial health. 
-
+sidebar_label: Report
+--- 
 <AddJob
   template="gsheet_zoho_books_simple_balance_sheet"
 />
+
+### About Balance sheet
+
+The Zoho Books balance sheet presents a real-time summary of your company's financial standing, showcasing assets, liabilities, and equity at a specific point in time. 
+
+### About this job
+Zoho books offers the balance sheet as a tabular report. This job fetchs that report from zoho books and makes it available for your in spreadsheets. Every balance sheet chart of account configured in zoho books will be visible as a line item. 
+
+When you add new chant of accounts into zoho books, they will automatically reflect in this report as a new line item. This can be a feature or a bug depending on how you look at it. 
+
+### Alternatives
+This same data is available as a raw data in database format - [fetch balance sheet raw data](/library/jobs/zoho_books/fetch_balance_sheet/raw_data) This means you can build your own custom balance sheet report. You can show/hide/format the line items that your reader is interested in. 
 
 
 ## Data

@@ -5,7 +5,7 @@ export default function TOCInlineWrapper(props) {
 
   return (
     <div className="inlineTOC">
-      <TOCInline {...props} />
+      {/*<TOCInline {...props} />*/}
     </div>
   );
 }

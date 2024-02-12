@@ -1,12 +1,13 @@
 ---
-title:  Profit And Loss Simple Format
+title:  Profit And Loss Raw Data
 sidebar_position: 2
-sidebar_label: Simple Format
+sidebar_label: Raw Data
 ---
 
 Zoho Books' Profit and Loss statement, provides a concise overview of a company's revenue, costs, and expenses over a specific period. It helps assess financial performance, indicating whether a business is profitable or incurring losses.
+
 <AddJob
-  template="gsheet_zoho_books_simple_pnl"
+  template="gsheet_zoho_books_db_pnl"
 />
 
 
@@ -15,18 +16,19 @@ Zoho Books' Profit and Loss statement, provides a concise overview of a company'
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=765912517"
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1851283076"
 />
 
 
 ### Data headers
 
-
-| Header | Description |
-|----|----|
-| Accounts | Name of the related account |
-| Accounts Id | zoho books id of the related account |
-| month |  |
+| Header      | Description                               |
+|-------------|-------------------------------------------|
+| account_name | Name of the account                        |
+| account_id   | Unique identifier for the account          |
+| node_name    | Node name associated with the account      |
+| month       |                                          |
+| value       |   |
 
 
 ### Filtration options
@@ -37,6 +39,7 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 |----|----|
 | start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
 | end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
 
 <!---
 ## Others
