@@ -1,13 +1,14 @@
 ---
-title:  AP Aging Summary
+title:  AR Aging Summary
 sidebar_position: 2
+sidebar_label: Report
 ---
 
 
-Zoho Books' AP Aging feature provides a concise overview of outstanding vendor bills, organized by aging periods. Quickly track overdue payments and assess your financial position with this tool.
+Zoho Books' AR Aging Summary provides a high-level overview of outstanding customer invoices, simplifying the assessment of your receivables.
 
 <AddJob
-  template="gsheet_zoho_books_simple_get_ap_aging_summary"
+  template="gsheet_zoho_books_db_get_ar_aging_summary_simple"
 />
 
 
@@ -16,27 +17,25 @@ Zoho Books' AP Aging feature provides a concise overview of outstanding vendor b
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1961156186"
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=360371601"
 />
 
 
 ### Data headers
 
-| Header    | Description                                           |
-|-----------|-------------------------------------------------------|
-| name | Name of the vendor                                    |
+| Header              | Description                                           |
+|---------------------|-------------------------------------------------------|
+| customer_name | Name of the vendor                                    |
 | current       | Current amount due                                   |
 | days_1-15      | Amount due in the 1-15 days aging period              |
 | days_16-30     | Amount due in the 16-30 days aging period             |
 | days_31-45     | Amount due in the 31-45 days aging period             |
 | above_45       | Amount due for 45 days and above aging period         |
-| overdue   | Total amount of overdue vendor bills                   |
-| sent      | Total amount of vendor bills sent                      |
-| entity    | Entity related to the vendor bills                     |
-| total     | Total amount of all vendor bills                       |
-| fcy_total | Total amount in the foreign currency                   |
-| id        | Unique identifier for the AP Aging Summary             |
-
+| total         | Total outstanding amount                             |
+| fcy_total     | Total outstanding amount in foreign currency          |
+| currency_code | Currency code for the transactions                    |
+| customer_id   | Unique identifier for the vendor                      |
+| currency_id   | Unique identifier for the currency                    |
 
 
 
