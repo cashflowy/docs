@@ -20,23 +20,28 @@ This job fetches vendors from Simplepor.
 
 ### Data headers
 
-| Header           | Description                                              |
-|------------------|----------------------------------------------------------|
-| content          | Content of the event notification                        |
-| type             | Type of the event notification                           |
-| doer             | Doer or actor associated with the event                  |
-| object_type      | Type of the object affected by the event                  |
-| object_id        | Identifier of the object affected by the event            |
-| user             | Name of the user associated with the event                |
-| user_email       | Email address of the user associated with the event      |
-| details_from     | Details indicating the source in the event                |
-| details_to       | Details indicating the destination in the event           |
-| details_action   | Details about the action performed in the event           |
-| details_por_no   | Details related to the purchase order number, if available|
-| createdAt        | Timestamp when the event was created                     |
-| updatedAt        | Timestamp when the event was last updated                |
-| id               | Unique identifier for the event                          |
-| user_id          | Unique identifier for the user associated with the event  |
+| Header            | Description                                               |
+|-------------------|-----------------------------------------------------------|
+| name              |Name of the vendor                                         |
+| type              | Type of the vendor                                        |
+| pan               | PAN No. of the vendor                                     |
+| gstin             | GSTIN of the vendor                                       |
+| tds               | Type of TDS                                               |
+| is_reverse_charge | Whether there is any Reverse Charge                       |
+| bank_acc_no       | Bank Account No. of the vendor                            |
+| bank_acc_type     | Bank Account Type of the vendor                           |
+| bank_name         | Name of the Bank of vendor                                |
+| bank_address      | Address of the Bank of vendor                             |
+| bank_ifsc         | IFSC Code of the Bank of vendor                           |
+| bank_swift        |Swift Code of the Bank                                     |
+| upi               | UPI ID of the vendor                                      |
+| contact           | Contact of the vendor                                     |
+| email             | Email of the vendor                                       |
+| phone_no          | Phone No. of the vendor                                   |
+| billing_address   | Billing address of the vendor                             |
+| createdAt         | Timestamp at which the event was created                  |
+| updatedAt         | Timestamp at which the event was last updated             |
+| id                | ID of the vendor                                          |
 
 
 
