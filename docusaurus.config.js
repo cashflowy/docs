@@ -83,11 +83,15 @@ const config = {
       },
     ],
     'docusaurus-plugin-sass',
+    'docusaurus-plugin-hotjar',
     require.resolve('docusaurus-plugin-image-zoom'),
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
+      hotjar:{
+        applicationId: 3890572,
+      },
       // image: 'img/logo/cypress-logo-circle-dark.png',
       navbar: {
         style: 'dark',
