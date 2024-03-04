@@ -90,7 +90,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       hotjar:{
-        applicationId: 3890572,
+        applicationId: 3891003,
       },
       // image: 'img/logo/cypress-logo-circle-dark.png',
       navbar: {
