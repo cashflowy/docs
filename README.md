@@ -30,7 +30,7 @@ served using any static contents hosting service.
 
 
 ### Deployment
-This is deployed using netlify. 
+This is deployed using netlify. When deployment fails, the most common reasons are broken links. Try to build locally to see figure out the broken links or other problems.
 
 ## License
 
