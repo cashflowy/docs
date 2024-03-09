@@ -30,13 +30,13 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
         docs: {
+          exclude:['**/_*.{js,jsx,ts,tsx,md,mdx}'], // exclude these files https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-pages#exclude
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/cashflowy/docs/tree/main',
@@ -102,11 +102,17 @@ const config = {
         // },
         title: 'CF Docs',
         items: [
+          // {
+          //   type: 'docSidebar',
+          //   position: 'left',
+          //   sidebarId: 'library',
+          //   label: 'Library',
+          // },
+          
           {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'library',
-            label: 'Library',
+            to: '/library/jobs/intro',
+            label: 'Library', 
+            position: 'left'
           },
           {
             to: 'https://www.cashflowy.io',

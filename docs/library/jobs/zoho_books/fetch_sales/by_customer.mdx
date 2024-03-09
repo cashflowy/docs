@@ -1,12 +1,12 @@
 ---
-title:  Sales by Item
+title:  By Customer
 sidebar_position: 2
 ---
 
-Efficiently retrieve sales data categorized by items with this dedicated job for fetching sales information from Zoho Books.
+Efficiently track and manage sales with this job dedicated to fetching sales data from Zoho Books, categorized by customer.
 
 <AddJob
-  template="gsheet_zoho_books_db_get_sales_by_item"
+  template="gsheet_zoho_books_db_get_sales_by_customer"
 />
 
 
@@ -15,7 +15,7 @@ Efficiently retrieve sales data categorized by items with this dedicated job for
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=280910222"
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1922010782"
 />
 
 
@@ -23,13 +23,13 @@ Efficiently retrieve sales data categorized by items with this dedicated job for
 
 | Header           | Description                                      |
 |------------------|--------------------------------------------------|
-| item_name        | Item name                                        |
+| customer_name    | Customer name                                    |
 | month            | Month of the sales data                           |
-| quantity_sold    | Quantity of items sold                            |
-| average_price    | Average price per item                            |
-| amount           | Total sales amount                                |
-| is_combo_product | Indicates whether the item is a combo product     |
-| item_id          | Zoho Books ID used to refer to the item           |
+| sales            | Sales amount                                     |
+| sales_with_tax   | Sales amount with tax                             |
+| count            | Count of transactions                            |
+| currency_code    | Currency code of the transactions                 |
+| customer_id      | Zoho Books ID used to refer to the customer       |
 
 
 ### Filtration options
@@ -40,7 +40,7 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 |----|----|
 | start_date | Select sales transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
 | end_date | Select sales transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
-| item_id | Select transactions related to a particular item (item_id) |
+| customer_id | Select transactions related to a particular contact (customer_id) |
 
 <!---
 ## Others

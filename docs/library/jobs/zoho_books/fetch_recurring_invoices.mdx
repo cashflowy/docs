@@ -1,54 +1,53 @@
 ---
-title:  Recurring Invoices
+title:  Recurring Invoice 
 sidebar_position: 2
 ---
 
-
-Recurring Invoices in Zoho Books allows seamless retrieval of key details for recurring invoices, streamlining management and providing insights into automated billing cycles.
+This job provides key information on recurring invoices, including recurrence name, customer details, status, reference number etc.
 
 <AddJob
-  template="gsheet_zoho_books_db_get_recurring_invoices"
+  template="gsheet_zoho_books_db_get_recurring_invoice_details"
 />
-
 
 ## Data
 
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=583424710"
+  src="https://docs.google.com/spreadsheets/d/1-gX-uq5YrTW-6gQJYM-mNXitEOfJLTiQCvPtV8CR1Yc/edit#gid=1534935461"
 />
-
 
 ### Data headers
 
-| Header                 | Description                                           |
+| Headers                  | Description                                           |
 |------------------------|-------------------------------------------------------|
-| customer_name          | Name of the customer                                   |
-| status                 | Current status of the recurring invoice               |
-| total                  | Total amount of the recurring invoice                 |
-| recurrence_name        | Name associated with the recurrence                    |
-| reference_number       | Reference number for the recurring invoice             |
-| child_entity_type      | Type of child entity associated with the invoice       |
-| start_date             | Start date of the recurring invoice                    |
-| end_date               | End date of the recurring invoice                      |
-| last_sent_date         | Date when the recurring invoice was last sent          |
-| next_invoice_date      | Date of the next scheduled invoice in the recurrence   |
-| recurrence_frequency   | Frequency of the recurrence (e.g., monthly, annually)  |
-| repeat_every           | Interval for the recurrence (e.g., every 1 month)      |
-| created_time           | Time when the recurring invoice was created            |
-| last_modified_time     | Time when the recurring invoice was last modified      |
-| customer_id            | Zoho books id for the customer                     |
-| recurring_invoice_id   | Zoho books id for the recurring invoice            |
+| recurrence_name        | Name of the recurring invoice recurrence.             |
+| customer_name          | Name of the customer associated with the invoice.     |
+| status                 | Current status of the recurring invoice.              |
+| reference_number       | Reference number associated with the invoice.         |
+| start_date             | Start date of the recurring invoice.                  |
+| end_date               | End date of the recurring invoice.                    |
+| last_sent_date         | Date of the last sent occurrence of the invoice.      |
+| next_invoice_date      | Date of the next scheduled invoice.                   |
+| recurrence_frequency   | Frequency at which the invoice recurs (e.g., monthly).|
+| repeat_every           | Interval between recurring invoices.                  |
+| currency_code          | Currency code used in the invoice.                    |
+| price_precision        | Precision of the price in the invoice.                |
+| bcy_total              | Total amount in base currency.                        |
+| recurring_invoice_id   | Zoho books id for the recurring invoice.              |
+| customer_id            | Zoho books id for the customer.                       |
+| currency_id            | Zoho books id for the currency used in the invoice.   |
 
-
+<!---
 ### Filtration options
 
 This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
 
 | Parameter | Options |
 |----|----|
-| customer_id | Select invoices issued to a particular customer. Customer id is the id of the customer from zoho books.  |
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+-->
 
 <!---
 ## Others

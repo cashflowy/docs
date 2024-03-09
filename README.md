@@ -35,3 +35,7 @@ This is deployed using netlify. When deployment fails, the most common reasons a
 ## License
 
 This project is licensed under the terms of the [MIT license](/LICENSE.md).
+
+### Development
+- run on a differnt port - `npm run start -- --port 8080`
+- starting a file with `_` make the file unpublished.
