@@ -1,13 +1,13 @@
 ---
-title:  Refunds Database format
+title:  Customers Database format
 sidebar_position: 2
 sidebar_label: Database format
 ---
 
-This job fetches Refunds from Stripe. 
+This job fetches Customers from Stripe. 
 
 <AddJob
-  template="gsheet_stripe_db_get_refunds" 
+  template="gsheet_stripe_customers" 
 />
 
 ## Data
@@ -15,7 +15,7 @@ This job fetches Refunds from Stripe.
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=2137988270"
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=1706337560"
 />
 
 
@@ -33,5 +33,6 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 
 | Parameter | Options |
 |----|----|
-
+| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
 

@@ -1,13 +1,13 @@
 ---
-title:  Invoices Line Items
+title:  Refunds Database format
 sidebar_position: 2
 sidebar_label: Database format
 ---
 
-This job fetches Invoice Line Items from Stripe. 
+This job fetches Refunds from Stripe. 
 
 <AddJob
-  template="gsheet_stripe_db_get_invoice_line_items" 
+  template="gsheet_stripe_refunds" 
 />
 
 ## Data
@@ -15,7 +15,7 @@ This job fetches Invoice Line Items from Stripe.
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=1133981433"
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=2137988270"
 />
 
 
@@ -33,6 +33,5 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 
 | Parameter | Options |
 |----|----|
-| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
-| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+
 
