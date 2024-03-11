@@ -1,15 +1,14 @@
 ---
-title:  Trial Balance Simple format
+title:  Cashflow Statement Database format
 sidebar_position: 2
-sidebar_label: Simple format
+sidebar_label: Database format
 ---
-#  Trial Balance - Simple Format
+#  Cashflow Statement - Db Format
 
-
-The QuickBooks Trial Balance is a financial report that summarizes the balances of all general ledger accounts at a specific point in time. It ensures the equality of debits and credits, providing a fundamental overview of a company's financial standing.
+The Quickbooks cash flow statement provides a real-time overview of your company's cash movements, detailing cash inflows and outflows at a specific point in time. It offers an immediate snapshot of your liquidity and how money is moving within your business. 
 
 <AddJob
-  template="gsheet_quickbooks_simple_trial_balance"
+  template="gsheet_quickbooks_cash_flow_statement_raw_data"
 />
 
 
@@ -18,19 +17,19 @@ The QuickBooks Trial Balance is a financial report that summarizes the balances 
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=2119128512"
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=796673755"
 />
-
 
 
 ### Data headers
 
 | Header | Description |
 |----|----|
-| Accounts | Name of the related account |
-| Accounts Id | Quickbooks Id of the related account |
-| Total for month |  Total account balance for a specific month |
-| Total |  Total account balance  |
+| Account name | Name of the related account |
+| Account Id | quickbooks id of the related account |
+| Month |  |
+| Value |  |
+
 
 ### Filtration options
 
@@ -41,7 +40,7 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 | start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
 | end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
 
-
+<!---
 ## Others
 
 ### Similar jobs

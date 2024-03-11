@@ -1,10 +1,12 @@
-#  Chart of Accounts - Database Format
+---
+title:  Accounts
+sidebar_position: 2
+---
 
-
-The QuickBooks List Accounts Details dataset provides essential information about accounts, including unique identifiers, names, types, currency codes, balances, default status, and creation/modification timestamps.
+The Quickbooks List Accounts provides a detailed listing of all accounts within the financial system. It includes information such as account names, types, classifications, and current balances.
 
 <AddJob
-  template="gsheet_quickbooks_db_get_accounts_list"
+  template="gsheet_quickbooks_accounts"
 />
 
 
@@ -13,23 +15,36 @@ The QuickBooks List Accounts Details dataset provides essential information abou
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=2061853272"
+  src="https://docs.google.com/spreadsheets/d/1KWa16ZCTRUdIF7LXFQzgCaBXEze4fpGWaV77tc8Q_Y8/edit#gid=206386456"
 />
-
 
 
 ### Data headers
 
-| Headers                      | Description                                                        |
-|------------------------------|--------------------------------------------------------------------|
-| Account       | General category of the account (example: Asset, Liability). |
-| Type          | Type of the account (example: Bank, Expense).   |
-| Detail Type   | Specific subtype or detail type of the account. |
-| Description   | Brief description of the account.               |
-| Balance   | Brief balance of the account.               |
+| Header                          | Description                                         |
+|---------------------------------|-----------------------------------------------------|
+| Name                            | Name of the account.                                |
+| FullyQualifiedName              | Full name with hierarchy.                           |
+| Active                          | Indicates if the account is active (true/false).    |
+| AccountType                     | General type of the account (e.g., Bank, Expense).  |
+| AccountSubType                  | Specific subtype or detail type of the account.     |
+| SubAccount                      | Indicates whether it is a sub-account (true/false). |
+| Classification                  | Type or classification of the account.              |
+| CurrentBalance                  | Current balance of the account.                     |
+| CurrentBalanceWithSubAccounts   | Current balance including sub-accounts.             |
+| Domain                          | Domain information related to the account.          |
+| Sparse                          | Indicates if the account is sparse (true/false).    |
+| Id                              | Unique identifier for the account.                  |
+| SyncToken                       | Token for synchronization purposes.                 |
+| ParentRef_value                 | Value of the parent reference (if applicable).      |
+| ParentRef_name                  | Name of the parent reference (if applicable).       |
+| CurrencyRef_value               | Value of the currency reference.                    |
+| CurrencyRef_name                | Name of the currency reference.                     |
+| MetaData_CreateTime             | Timestamp indicating the creation time.             |
+| MetaData_LastUpdatedTime        | Timestamp indicating the last update time.          |
 
 
-
+<!---
 ## Others
 
 ### Similar jobs
