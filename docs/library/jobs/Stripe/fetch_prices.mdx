@@ -3,7 +3,7 @@ title:  Prices
 sidebar_position: 2
 ---
 
-This job fetches Prices from Stripe. 
+This job fetches Prices from Stripe. Prices define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of products. Products help you track inventory or provisioning, and prices help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing options should be represented by prices. 
 
 <AddJob
   template="gsheet_stripe_prices" 
@@ -59,3 +59,8 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 | currency    | Only return prices for the given currency (e.g., usd, inr,...).                                                         |
 | type        | Only return prices of type recurring or one_time.                                                                     |
 | limit       | A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.            |
+
+
+
+### References
+- [Prices - stripe API docs](https://docs.stripe.com/api/prices)

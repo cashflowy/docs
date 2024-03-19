@@ -1,12 +1,12 @@
 ---
-title:  Payouts
+title:  Disputes
 sidebar_position: 2
 ---
 
-This job fetches Payouts from Stripe as raw data. A Payout object is created when you receive funds from Stripe, or when you initiate a payout to either a bank account or debit card of a connected Stripe account. You can retrieve individual payouts, and list all payouts. Payouts are made on varying schedules, depending on your country and industry.
+This job fetches Disputes from Stripe. A dispute occurs when a customer questions your charge with their card issuer. When this happens, you have the opportunity to respond to the dispute with evidence that shows that the charge is legitimate.
 
 <AddJob
-  template="gsheet_stripe_payouts" 
+  template="gsheet_stripe_disputes" 
 />
 
 ## Data
@@ -14,7 +14,7 @@ This job fetches Payouts from Stripe as raw data. A Payout object is created whe
 ### Sample Data
 
 <Gsheet
-  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=1546870372"
+  src="https://docs.google.com/spreadsheets/d/1yiCWVI4oGzIPUBR2Emm2YJGfpisbRnxShpuFw1MVqzE/edit#gid=951332324"
 />
 
 
@@ -38,4 +38,4 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 
 
 ### References
-- [Payouts - stripe API docs](https://docs.stripe.com/api/payouts)
+- [Disputes - stripe API docs](https://docs.stripe.com/api/disputes)

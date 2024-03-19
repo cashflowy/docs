@@ -3,7 +3,7 @@ title:  Charges
 sidebar_position: 2
 ---
 
-This job fetches Charges from Stripe. 
+This job fetches Charges from Stripe. The Charge object represents a single attempt to move money into your Stripe account. PaymentIntent confirmation is the most common way to create Charges, but transferring money to a different Stripe account through Connect also creates Charges.
 
 <AddJob
   template="gsheet_stripe_charges" 
@@ -35,3 +35,6 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 | start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
 | end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
 
+
+### References
+- [Charges - stripe API docs](https://docs.stripe.com/api/charges)

@@ -3,7 +3,7 @@ title:  Invoices
 sidebar_position: 2
 ---
 
-This job fetches Invoices from Stripe. 
+This job fetches Invoices from Stripe. Invoices are statements of amounts owed by a customer, and are either generated one-off, or generated periodically from a subscription.
 
 <AddJob
   template="gsheet_stripe_invoices" 
@@ -35,3 +35,6 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 | start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
 | end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
 
+
+### References
+- [Invoices - stripe API docs](https://docs.stripe.com/api/invoices)

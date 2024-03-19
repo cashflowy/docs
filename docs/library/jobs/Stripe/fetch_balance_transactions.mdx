@@ -3,7 +3,10 @@ title:  Balance Transactions
 sidebar_position: 2
 ---
 
-This job fetches Balance Transactions from Stripe. 
+This job fetches Balance Transactions from Stripe. Balance transactions represent funds moving through your Stripe account. Stripe creates them for every type of transaction that enters or leaves your Stripe account balance.
+
+
+
 
 <AddJob
   template="gsheet_stripe_balance_transactions" 
@@ -35,3 +38,7 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 | start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
 | end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
 
+
+
+### References
+- [Balance transaction - stripe API docs](https://docs.stripe.com/api/balance_transactions)
