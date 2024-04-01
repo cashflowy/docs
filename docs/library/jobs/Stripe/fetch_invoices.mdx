@@ -22,7 +22,42 @@ This job fetches Invoices from Stripe. Invoices are statements of amounts owed b
 
 | Header           | Description                                              |
 |------------------|----------------------------------------------------------|
-
+| date | Date of issue of the invoice |
+| number | Invoice nunber |
+| customer_name | Customer name |
+| customer_email | Customer email id |
+| status | Status of the invoice |
+| line_items | Number of line items in the invoice |
+| discount | Discount applied to the invoice |
+| tax | Tax applied to the invoice |
+| subtotal_excluding_tax | Subtotal excluding tax |
+| subtotal | Subtotal |
+| total_excluding_tax | Total excluding tax |
+| total | Total |
+| amount_due | Amount due |
+| amount_paid | Amount paid |
+| amount_remaining | Amount remaining to be paid |
+| currency | Currency |
+| due_date | Due date |
+| attempt_count | Attempted to charge count |
+| attempted | Attempted to charge |
+| auto_advance | Auto advance |
+| billing_reason | Reason for billing |
+| collection_method | collection method |
+| default_payment_method | Default payment method |
+| default_source | Default source |
+| description | Description |
+| hosted_invoice_url | Invoice link |
+| invoice_pdf | Invoice as PDF |
+| livemode | Created during live mode or not |
+| payment_intent | Payment intent ID |
+| customer | Customer ID |
+| charge | Charge ID |
+| receipt_number | Reciept number |
+| subscription | Subscription ID |
+| quote | Quote ID |
+| created | created at time stamp |
+| id | ID of the invoice |
 
 
 
@@ -32,8 +67,8 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 
 | Parameter | Options |
 |----|----|
-| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
-| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| start_date | Select invoices created on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select invoices created on or before `end_date`. Format - `YYYY-MM-DD` |
 
 
 ### References
