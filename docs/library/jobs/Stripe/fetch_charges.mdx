@@ -22,7 +22,33 @@ This job fetches Charges from Stripe. The Charge object represents a single atte
 
 | Header           | Description                                              |
 |------------------|----------------------------------------------------------|
-
+| created | Created at timestamp |
+| amount | Amount charged |
+| amount_captured | Amount captured |
+| amount_refunded | Amount refunded |
+| currency | Currency |
+| captured | Is captured? |
+| status | Status |
+| type | Type of the charge |
+| dispute | Dispute if any |
+| disputed | Is disputed? |
+| failure_code | Failure code |
+| failure_message | Failure message |
+| paid | Is paid? |
+| receipt_number | Receipt number |
+| receipt_url | Receipt url |
+| refunded | Is refunded? |
+| ach_acc_no | ACH account number |
+| ach_bank | ACH Bank |
+| ach_routing_number | ACH routing number |
+| ach_swift_code | ACH swift code |
+| livemode | Is livemode? |
+| payment_intent | Payment intent ID |
+| payment_method | Payment method ID |
+| invoice | Invoice ID |
+| customer | Customer ID |
+| balance_transaction | Balance Transaction ID |
+| id | ID of the charge |
 
 
 
@@ -32,8 +58,8 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 
 | Parameter | Options |
 |----|----|
-| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
-| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| start_date | Select charges created on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select charges created on or before `end_date`. Format - `YYYY-MM-DD` |
 
 
 ### References
