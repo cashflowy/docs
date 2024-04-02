@@ -3,7 +3,7 @@ title:  Subscriptions
 sidebar_position: 2
 ---
 
-This job fetches Subscriptions from Stripe. 
+Subscriptions allow you to charge a customer on a recurring basis. This job fetches Subscriptions from Stripe. 
 ### References
 - [Disputes - stripe API docs](https://docs.stripe.com/api/disputes)
 
@@ -24,7 +24,30 @@ This job fetches Subscriptions from Stripe.
 
 | Header           | Description                                              |
 |------------------|----------------------------------------------------------|
-
+| status | Status of the subscription |
+| amount | Amount |
+| interval | Subsciption interval |
+| quantity | Quantity of item |
+| discount | Discount offered in the subscription |
+| start_date | Start date for the subscription |
+| ended_at | End date for the subscription |
+| trial_start | Trial start date |
+| trial_end | Trial end date |
+| current_period_start | Start date of the current running period |
+| current_period_end | End date of the current running period |
+| cancel_at_period_end | Is it configured to end at the end of the period? |
+| cancel_at | Date on which the subscription will be cancelled |
+| canceled_at | Time at which the subscription was marked as to be cancelled |
+| currency | Currency |
+| collection_method | Collection method |
+| days_until_due | Days since creation of the invoice, when the payment is due |
+| created | Time of creating this subscription |
+| livemode | Is this live mode |
+| default_payment_method | Default payment method |
+| default_source | Default source |
+| latest_invoice | Last invoice |
+| customer | Customer ID |
+| id | ID of the subscription |
 
 
 
@@ -34,8 +57,8 @@ This job can restrict the data that is visible in spreadsheets. Use the followin
 
 | Parameter | Options |
 |----|----|
-| start_date | Select bills with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
-| end_date | Select bills with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| start_date | Select subscriptions created on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select subscriptions created on or before `end_date`. Format - `YYYY-MM-DD` |
 
 
 ### References
