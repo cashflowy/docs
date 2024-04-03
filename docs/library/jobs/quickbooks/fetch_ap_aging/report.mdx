@@ -27,10 +27,20 @@ The Quickbooks AP (Accounts Payable) Aging Report summarizes outstanding vendor 
 |----|----|
 | Accounts | Name of the related account |
 | Accounts Id | quickbooks id of the related account |
-| Current |  Current account balance of the related account |
-| Total |  Total account balance for a specific month |
-| Total |  Total account balance for another specific month |
-| ... |  ...  |
+| Current | Invoice issued but payment is not due yet |
+| 1 - 30 | Total due which is overdue by 1-30 days |
+| 31 - 60 | Total due which is overdue by 31 - 60 days |
+| 61 - 90 | Total due which is overdue by 31 - 60 days |
+| 91 and over | Total due which is overdue more than 91 days |
+| Total | Total due for this account |
+
+### Filtration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| report_date | Gets the report as of a specific date. If left empty, then it will get data as of today. Format - `YYYY-MM-DD`. |
 
 
 <!---
