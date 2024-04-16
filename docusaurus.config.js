@@ -108,7 +108,11 @@ const config = {
           //   sidebarId: 'library',
           //   label: 'Library',
           // },
-          
+          {
+            to: '/product/fetch/intro',
+            label: 'Products', 
+            position: 'left'
+          },
           {
             to: '/library/jobs/intro',
             label: 'Library', 

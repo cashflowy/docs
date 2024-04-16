@@ -1,0 +1,56 @@
+---
+title: Access Control
+sidebar_position: 2
+---
+
+In SimplePOR, we support certain levels of access. When you add a user, you have the option to add the user as 
+
+- Admin
+- Creator
+- Requestor
+- Finance Approver
+- Accountant
+
+Lets look at the various access levels and what such users can do or cannot do. 
+
+
+### Access Table 
+
+|        | Action          | Admin              | Creator            | Requestor          | Finance Approver   | Accountant         |
+|--------|-----------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| POR    | View PORs       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| POR    | Create POR      | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    |                    |
+| POR    | Edit POR        | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    |                    |
+| POR    | Duplicate POR   | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    |                    |
+| POR    | Withdraw POR    | :white_check_mark: | :white_check_mark: | :white_check_mark: |                    |                    |
+| Vendor | View Vendors    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Vendor | Create Vendor   | :white_check_mark: | :white_check_mark: |                    |                    |                    |
+| Vendor | Edit Vendor     | :white_check_mark: | :white_check_mark: |                    |                    |                    |
+| Vendor | Delete Vendor   | :white_check_mark: | :white_check_mark: |                    |                    |                    |
+| Budget | View Budgets    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Budget | Create Budget   | :white_check_mark: |                    |                    | :white_check_mark: |                    |
+| Budget | Edit Budget     | :white_check_mark: |                    |                    | :white_check_mark: |                    |
+| User   | View Users      | :white_check_mark: |                    |                    |                    |                    |
+| User   | Add/Remove User | :white_check_mark: |                    |                    |                    |                    |
+| Payout | View payouts    | :white_check_mark: | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |
+| Payout | Toggle payouts  | :white_check_mark: |                    |                    | :white_check_mark: |                    |
+
+### Admin user
+
+Admin user has all the super powers. They have unrestricted access to all parts of the app within a particular organisation. There is nothing an admin cannot do.
+
+
+### Creator
+
+Creators can create PORs and Vendors but cannot create or modify budgets or payouts. This user is best given to Senior members in a team
+
+### Requestors
+
+Requestor has further restrictions compared to a Creator. Requestors can view most data on the POR app, but they can create or modify only PORs. Creators can edit vendors while requestors cannot do that. This access type best suits Junior members in a team. 
+
+### Finance Approver
+
+Finance approvers can view most parts of the app and can create/edit budgets. However they cannot create/edit vendors. Finance approver are best suited for someone handling finance operations in a team. 
+
+### Accountant
+Accountant are similar to Finance Approver. They have more restricted access. They cannot modify any data on the app. However they have view all data. This is meant to be shared with junior staff in a finance ops team or to book keepers. 
