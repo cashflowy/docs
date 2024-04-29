@@ -13,4 +13,27 @@ SimplePOR has the following feature flags:
 
 ### View only mode
 
-When this mode is enabled, it disables all modification actions on 
+When this mode is enabled, it disables all modification actions for the particular organisation. This is useful when you want to freeze your budget while transitioning to the next years budget etc. 
+
+The following things are disabled
+- POR
+	- Create POR
+	- Withdraw POR
+- Approvals 
+- Budgets
+	- Create budget
+	- Edit budget
+	- Archive budget
+- Vendors
+	- Create vendor
+	- Edit vendor
+
+Anyone can still continue to view all the data in the organisation. 
+
+### Enable backdated POR
+By default, users cannot back date PORs. This enables users to create PORs that are dated before today. 
+
+### Anyone can view budget
+By default creators and requestors cannot view budgets that they are not an approver off. This is for organisations that want its users to to creators to create purchase request but not view state of the budget. 
+
+For organisations that are more early stage or want to be more transparent, they can enable anyone to view all budgets.  
