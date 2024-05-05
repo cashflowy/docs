@@ -11,6 +11,7 @@ import DocsImage from "@site/src/components/docs-image";
 import DocsVideo from "@site/src/components/docs-video";
 import Gsheet from "@site/src/components/gsheet";
 import AddJob from "@site/src/components/add-job";
+import Arcade from "@site/src/components/arcade";
 import AddReport from "@site/src/components/add-report";
 import DocumentDomainWorkaround from "@site/docs/partials/_document-domain-workaround.mdx";
 import E2EOnlyBadge from "@site/src/components/e2e-only-badge";
@@ -129,6 +130,7 @@ export default {
   DocsVideo,
   Gsheet,
   AddJob,
+  Arcade,
   AddReport,
   DocumentDomainWorkaround,
   E2EOnlyBadge,
