@@ -1,0 +1,49 @@
+---
+title: Create POR
+sidebar_position: 2
+---
+
+
+## Create POR
+<Arcade
+	id="TNdmAnrt13YOoNLJZXFm"
+/>
+
+<br/>
+
+| Field           | Details                                                                                                                                                                                                                                                                        |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| type            | A POR can be goods or service. Choosing this helps preselect TDS. Also helps finance teams with their ops process.                                                                                                                                                             |
+| PO number       | A unique, human readable, reference number for a POR. This number is auto generated from sequence pattern.                                                                                                                                                                     |
+| Date            | Date for this POR. Users cannot enter past dates. Admin can allow users to create pre-dated invoices by using the "Allow predated POR" feature flag.                                                                                                                           |
+| Vendor          | Vendor to whom this PO is going to be issued.                                                                                                                                                                                                                                  |
+| Currency        | Currency in which we will be paying the vendor                                                                                                                                                                                                                                 |
+| Budget          | Value of the POR will be deducted from this budget. Budget selected will also determine the approvers for this POR.                                                                                                                                                            |
+| Submitted By    | Who is this POR submitted by. By convention, it is expected that the person filling in the form is the submitter for the POR. This field allows others to create POR on your behalf. Useful if you have an assistant.                                                          |
+| Line item       | Line items for a POR consists of TDS, Item name, GST as percentage, unit price etc. More details in the table below.                                                                                                                                                           |
+| Incoterms       | The terms agreed by vendor and the buyer in terms of who handles what risks associated with shipping goods. There are some internationally known standard terms for incoterms. You can find them here - https://incodocs.com/blog/incoterms-2020-explained-the-complete-guide/ |
+| Payment process | Instruct the finance team the vendors preferred mode of payment. If you already paid the vendor from your personal account, use option reimbursement to instruct finance team to pay you instead of the venday                                                                 |
+| Payment terms   | Specify when the vendor is expecting the payment. e.g. net30 means the vendor is expect the PO to be paid in 30 days.                                                                                                                                                          |
+| Invoice date    | Date mentioned in the invoice or date when the invoice is due.                                                                                                                                                                                                                 |
+| Quote/Invoice   | Attach any relevant documents such as quote/invoice to this POR.                                                                                                                                                                                                               |
+
+
+## Reimbursement
+
+Lets say you have already made the payment for incidental expenses that you are approved to make. SimplePOR also allows you to to make PORs for your reimbursements. 
+
+When you are creating your POR, set payment option as `Reimbursement`. Once the PO is approved, your finance team will pay you instead of paying the vendor. 
+
+
+## Add attachment
+
+Typical finance process requires users to submit invoices along with the PO. You can attach a Performa invoice or the actual Invoice to the POR. This helps the finance team reconcile the POs, Invoices and Payments. 
+
+
+## Add comments
+
+Comment section on each POR helps you with 2 things:
+- communicate with the stakeholders about any issues with the POR
+- add information specific to the POR that you want to refer to later
+
+## 

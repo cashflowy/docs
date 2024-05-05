@@ -9,3 +9,9 @@ Key features of Simple POR
 - up to 2 step approval flow
 - finance team still controls payment schedules
 - purchaser still gets to maintain a relationship with vendor
+
+
+The purchase process consists of these 3 types of users:
+- Buyer
+- Approver
+- Finance team
