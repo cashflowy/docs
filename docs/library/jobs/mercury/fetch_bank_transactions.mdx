@@ -1,0 +1,62 @@
+---
+title:  Bank Transactions
+sidebar_position: 2
+---
+
+
+This job fetches all transactions made in your bank account from mercury. If you want to get all transactions, you can use [fetch account transactions](/library/jobs/mercury/fetch_bank_transactions)
+
+<AddJob
+  template="gsheet_mercury_bank_transactions"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1KM7f8zh6iqhAkdaAMKsk-w_I4bfIsXE1UyVWo9SGKpg/edit#gid=0"
+/>
+
+
+### Data headers
+
+### Mercury Transactions Documentation Table (Ordered)
+
+| Header                        | Description                                              |
+|-------------------------------|----------------------------------------------------------|
+| createdAt                     | Date and time when the transaction was created           |
+| postedAt                      | Date and time when the transaction was posted            |
+| estimatedDeliveryDate         | Estimated delivery date of the transaction               |
+| counterpartyName              | Name of the counterparty                                 |
+| amount                        | Amount transacted                                        |
+| kind                          | Type of the transaction (e.g., `debitCardTransaction`)   |
+| status                        | Status of the transaction                                |
+| note                          | Additional note related to the transaction               |
+| bankDescription               | Bank's description of the transaction                    |
+| externalMemo                  | External memo associated with the transaction            |
+| reasonForFailure              | Reason for failure if the transaction failed             |
+| failedAt                      | Date and time when the transaction failed                |
+| dashboardLink                 | Link to the transaction dashboard                        |
+| counterpartyNickname          | Nickname of the counterparty                             |
+| currencyExchangeInfo          | Information about currency exchange                     |
+| compliantWithReceiptPolicy    | Compliance status with receipt policy                    |
+| hasGeneratedReceipt           | Whether a receipt has been generated                     |
+| mercuryCategory               | Category of the transaction according to Mercury         |
+| generalLedgerCodeName         | General ledger code name                                 |
+| id                            | Unique ID of the transaction                             |
+| feeId                         | Fee ID related to the transaction                        |
+| counterpartyId                | ID of the counterparty                                   |
+| creditAccountPeriodId         | ID of the credit account period                          |
+
+
+### Filtration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| account_id | Select transactions related to a particular account. Account id is the id of the account from mercury. |
+
