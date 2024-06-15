@@ -1,0 +1,59 @@
+---
+title:  Transactions
+sidebar_position: 2
+---
+
+
+This job fetches all transactions made in your bank account from Actual. If you want to get all transactions, you can use [fetch account transactions](/library/jobs/actual/fetch_transactions)
+
+<AddJob
+  template="gsheet_actual_transactions"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/1viw9mNzEk4sitlYSRmmVqHl8hTsf4eUVuJr48vKTbJw/edit#gid=0"
+/>
+
+
+### Data headers
+
+
+| Header                | Description                                          |
+|-----------------------|------------------------------------------------------|
+| date                  | Date and time of the transaction                     |
+| payee                 | Name of the payee                                    |
+| imported_payee        | Imported name of the payee                           |
+| amount                | Amount transacted                                    |
+| notes                 | Additional notes related to the transaction          |
+| subtransactions       | Subtransactions associated with the main transaction |
+| account               | Account associated with the transaction              |
+| category              | Category of the transaction                          |
+| starting_balance_flag | Flag indicating if this is a starting balance        |
+| cleared               | Indicates if the transaction is cleared              |
+| reconciled            | Indicates if the transaction is reconciled           |
+| is_parent             | Indicates if the transaction is a parent transaction |
+| is_child              | Indicates if the transaction is a child transaction  |
+| error                 | Error status of the transaction                      |
+| tombstone             | Indicates if the transaction is a tombstone          |
+| schedule              | Schedule associated with the transaction             |
+| sort_order            | Order in which the transaction is sorted             |
+| id                    | Unique ID of the transaction                         |
+| parent_id             | ID of the parent transaction                         |
+| imported_id           | Imported ID associated with the transaction          |
+| transfer_id           | ID of the transfer transaction                       |
+
+
+### Filtration options
+
+This job can restrict the data that is visible in spreadsheets. Use the following parameters to restrict the data.
+
+| Parameter | Options |
+|----|----|
+| start_date | Select transactions with billing date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date | Select transactions with billing date on or before `end_date`. Format - `YYYY-MM-DD` |
+| account_id | Select transactions related to a particular account. Account id is the id of the account from actual. |
+
