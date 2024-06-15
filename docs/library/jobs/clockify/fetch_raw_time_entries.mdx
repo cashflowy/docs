@@ -1,0 +1,56 @@
+---
+title: Raw Time Entries
+sidebar_position: 2
+---
+
+This job fetches all time entries made in your Clockify account. If you want to get all time entries, you can use [fetch time entries](/library/jobs/clockify/fetch_raw_time_entries).
+
+<AddJob
+  template="gsheet_clockify_raw_time_entries"
+/>
+
+## Data
+
+### Sample Data
+
+<Gsheet
+  src="https://docs.google.com/spreadsheets/d/10o0VtmOZkqR6fayE_SIIDgooCg2i_yaFv6wQW2a2oLA/edit#gid=0"
+/>
+
+### Data Headers
+
+| Header              | Description                                          |
+|---------------------|------------------------------------------------------|
+| description         | Description of the time entry                        |
+| project             | Name of the project associated with the time entry   |
+| task                | Task associated with the time entry                  |
+| start               | Start time of the time entry                         |
+| end                 | End time of the time entry                           |
+| duration            | Duration of the time entry                           |
+| user                | Name of the user who created the time entry          |
+| tags                | Tags associated with the time entry                  |
+| billable            | Indicates if the time entry is billable              |
+| hourlyRate          | Hourly rate for the time entry                       |
+| costRate            | Cost rate for the time entry                         |
+| isLocked            | Indicates if the time entry is locked                |
+| type                | Type of the time entry                               |
+| customFieldValues   | Custom field values associated with the time entry   |
+| kiosk               | Kiosk information associated with the time entry     |
+| id                  | Unique ID of the time entry                          |
+| userId              | ID of the user who created the time entry            |
+| workspaceId         | ID of the workspace associated with the time entry   |
+| tagIds              | IDs of the tags associated with the time entry       |
+| taskId              | ID of the task associated with the time entry        |
+| projectId           | ID of the project associated with the time entry     |
+| kioskId             | ID of the kiosk associated with the time entry       |
+
+### Filtration Options
+
+This job can restrict the data visible in spreadsheets. Use the following parameters to restrict the data:
+
+| Parameter   | Options                                                               |
+|-------------|-----------------------------------------------------------------------|
+| start_date  | Select time entries with a start date on or after `start_date`. Format - `YYYY-MM-DD` |
+| end_date    | Select time entries with an end date on or before `end_date`. Format - `YYYY-MM-DD`   |
+| workspace_id| Select time entries related to a particular workspace. Workspace ID is the ID of the workspace from Clockify. |
+| user_id     | Select time entries related to a particular user. User ID is the ID of the user from Clockify. |
